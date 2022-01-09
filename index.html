@@ -16,7 +16,6 @@
 <!-- ADD IMAGES TO PROJECTS -->
 <!-- UPDATE NAVBAR (CHANGE NAVBAR DESIGN?) -->
 <!-- UPDATE VIEW CODE TO SHOW A LIVE PREVIEW -->
-<!-- UPDATE EMAIL CSS -->
 <body>
     <div id="header">
         <div id="logo">
@@ -24,11 +23,11 @@
         </div>
         <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
         <label for="menu-icon"></label>
-        <nav class="nav"> 		
+        <nav id="nav" class="nav"> 		
             <ul class="pt-5">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a id="about-nav" href="#about">About Me</a></li>
+                <li><a id="portfolio-nav" href="#portfolio">Portfolio</a></li>
+                <li><a id="contact-nav" href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </div>
@@ -72,8 +71,8 @@
             </div>
             <p>A responsive page for an e-learning platform that focuses on teaching life skills and mental health education to students.</p>
             <div class="buttons">
-                <a href="" id="blog-site">View site</a>
-                <a href="">View code</a>
+                <a href="https://henrydelglitch.github.io/the-lifedu/">View site</a>
+                <a href="https://github.com/HenryDelGlitch/the-lifedu">View code</a>
             </div>
         </div>
         <div class="projects">
@@ -84,56 +83,55 @@
                 <p>PHP</p>
                 <p>CSS</p>
             </div>
-            <p>A Wordpress blog where I write about my thoughts and ideas. </p>
+            <p>A responsive Wordpress blog where I write about my ideas, upcoming projects, and some random snippets about my life!</p>
             <div class="buttons">
-                <a href="" id="blog-site">View site</a>
-                <a href="">View code</a>
+                <a href="https://glitchblog.site/">View site</a>
+                <a href="https://github.com/HenryDelGlitch/glitchblog-theme">View code</a>
             </div>
         </div>
         <div class="projects">
             <h2>Inspirational Journal</h2>
-            <img src="" alt="Wordpress Icon"/>
+            <img src="./img/journal.png" alt="Wordpress Icon"/>
             <div class="languages">
                 <p>React</p>
                 <p>Redux</p>
                 <p>CSS</p>
             </div>
-            <p>A TODO list with inspirational quotes, and your local weather information!</p>
+            <p>A TODO list with inspirational quotes to motivate you with lovely photos in the background also telling you your local weather information.</p>
             <div class="buttons">
-                <a href="" id="blog-site">View site</a>
-                <a href="">View code</a>
+                <a href="http://inspirationalhomepage.website/">View site</a>
+                <a href="https://github.com/HenryDelGlitch/weatherAppPortfolio">View code</a>
             </div>
         </div>
         <div class="projects">
             <h2>Github Repo Gallery</h2>
-            <img src="" alt="Wordpress Icon"/>
+            <img id="github-picture" src="./img/github-repo.png" alt="Wordpress Icon"/>
             <div class="languages">
                 <p>HTML</p>
                 <p>CSS</p>
                 <p>JS</p>
             </div>
-            <p>A Github Repo gallery presenting all my repos!</p>
+            <p>A Github Repo gallery that shows all my public repos! You can search for a specific one or scroll through the list. Click on the repos for more information!</p>
             <div class="buttons">
-                <a href="" id="blog-site">View site</a>
-                <a href="">View code</a>
+                <a href="https://henrydelglitch.github.io/github-repo-gallery/">View site</a>
+                <a href="https://github.com/HenryDelGlitch/github-repo-gallery">View code</a>
             </div>
         </div>
     </div>
     <div id="contact">
         <div class="links">
             <button class="links-buttons" id="about-button" role="button"><a href="#about">About Me</a></button>
-            <button class="links-buttons" id="portfolio-button" role="button"><a href="#about">Portfolio</a></button>
+            <button class="links-buttons" id="portfolio-button" role="button"><a href="#portfolio">Portfolio</a></button>
         </div>
-        <div class="info">
-            <div class="box">
+        <div class="info" id="info">
+            <div class="box" id="contactmebox">
                 <div class="inner">
-                  <span>Contact Me</span>
+                  <span>Click Me</span>
                 </div>
                 <div class="inner">
                   <span>Contact Me</span>
                 </div>
             </div>
-            <button class="noselect" id="email">CodingWHenry@gmail.com</button>
             <div class="social-media">
                 <a href="https://twitter.com/Glitch_Delgado" class="twitter" target="_blank">
                     <img src="./img/frontview/Twitter.png" alt="Twitter Icon"/>
@@ -148,4 +146,5 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/899031a80d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>

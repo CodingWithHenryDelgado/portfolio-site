@@ -453,6 +453,7 @@ body {
 
 .projects h2 {
     background-color: var(--gold);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     color: #FFF;
     border-radius: 20px;
     font-size: 2rem;
@@ -462,8 +463,8 @@ body {
 
 .projects img {
     padding: 2rem 0;
-    height: 250px;
-    width: auto;
+    height: 30vh;
+    width: 75vw;
 }
 
 .projects p {
@@ -478,6 +479,7 @@ body {
 
 .projects .languages p {
     background-color: var(--gold);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
     color: #FFF;
     margin: 0 0.5rem;
@@ -493,8 +495,12 @@ body {
 
 .projects .buttons a {
     background-color: var(--gold);
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
     color: #FFF;
+    cursor: pointer;
+    font-size: 4vh;
     margin: 0.5rem 0;
     text-align: center;
     text-decoration: none;
@@ -538,7 +544,7 @@ body {
 .info {
     color: #FFF;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     line-height: 2rem;
@@ -554,6 +560,10 @@ body {
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+#contactmebox {
+    cursor: pointer;
 }
 
 .box {
@@ -596,7 +606,7 @@ body {
 }
 
 #email {
-    width: 75vw;
+    width: 55vw;
     height: 10vh;
     cursor: pointer;
     border: none;
@@ -702,13 +712,21 @@ body {
     .projects {
         font-size: 2rem;
         margin: 10% 5%;
-        height: 70vh;
+        height: 90vh;
         width: 75vw;
     }
 
     .projects h2 {
         font-size: 3rem;
         padding: 1.5rem 2rem;
+    }
+
+    .projects img {
+        width: auto;
+    }
+
+    #github-picture {
+        width: 80%;
     }
 
     .projects p {
@@ -730,11 +748,31 @@ body {
         width: 15rem;
     }
 
+    #contact {
+        height: 75vh;
+    }
+
+    .links {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 75vw;
+    }
+
+    .links ul li {
+        display: inline-flex;
+        margin: 0 5vw;
+    }
+
     .links-buttons,
     .links-buttons:after {
         font-size: 3vh;
         height: 10vh;
         width: 30vw;
+    }
+
+    .info {
+        justify-content: space-evenly;
+        padding: 2vh 0;
     }
 
 }
@@ -814,17 +852,6 @@ body {
         width: 15vw;
     }
 
-    .links {
-        justify-content: space-around;
-        flex-direction: row;
-        width: 75vw;
-    }
-
-    .links ul li {
-        display: inline-flex;
-        margin: 0 5vw;
-    }
-
     .links-buttons,
     .links-buttons:after {
         font-size: 4vh;
@@ -833,10 +860,6 @@ body {
 
     .box .inner span {
         font-size: 13vh;
-    }
-
-    #email {
-        width: 50vw;
     }
 
     .social-media {
