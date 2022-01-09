@@ -37,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #FFF;
+    font-family: 'Hind Vadodara', sans-serif;
     font-size: 2rem;
     text-align: center;
     padding-top: 5%;
@@ -47,7 +48,7 @@ body {
     top: 33px;
     right: 25px;
     display: block;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     width: 80px;
     height: 80px;
     padding: 0;
@@ -94,7 +95,7 @@ body {
 }
 
 .nav ul li a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: inherit;
     font-size: 7vh;
     text-transform: uppercase;
     text-decoration: none;
@@ -277,7 +278,7 @@ body {
 }
 
 #logo p {
-    font-family: 'Raleway';
+    font-family: 'Hind Vadodara', sans-serif;
 }
 
 /* PROFILE CARD */
@@ -322,6 +323,7 @@ body {
     padding: 8vh 20px 0px 20px;
     background: #FFFFFF;
     color: #000000;
+    font-family: 'Hind Vadodara', sans-serif;
     opacity: 0;
     text-align: center;
     -webkit-animation: moveIn 1s 3.1s ease forwards;
@@ -382,6 +384,7 @@ body {
     border-top: 5px dashed #EEEEEE;
     background: #FFFFFF;
     color: #333333;
+    font-family: 'Hind', sans-serif;
     margin-top: 50px;
     line-height: 1.5rem;
     text-align: center;
@@ -438,6 +441,14 @@ body {
     width: 100vw;
 }
 
+#portfolio h2 {
+    color: #fff;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 6vh;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
 .projects {
     background: #FFFFFF;
     border-radius: 20px;
@@ -451,12 +462,14 @@ body {
     margin: 10%;
 }
 
-.projects h2 {
+.projects h3 {
     background-color: var(--gold);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     color: #FFF;
     border-radius: 20px;
     font-size: 2rem;
+    font-family: 'Hind Vadodara', sans-serif;
+    line-height: 7vh;
     text-align: center;
     padding: 1rem 1.5rem;
 }
@@ -464,10 +477,15 @@ body {
 .projects img {
     padding: 2rem 0;
     height: 30vh;
-    width: 75vw;
+    width: auto;
+}
+
+#github-picture {
+    width: 90%;
 }
 
 .projects p {
+    font-family: 'Hind', sans-serif;
     padding: 1rem 0;
 }
 
@@ -475,6 +493,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Rambla', sans-serif;
 }
 
 .projects .languages p {
@@ -491,6 +510,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Rambla', sans-serif;
 }
 
 .projects .buttons a {
@@ -535,6 +555,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Hind', sans-serif;
     font-size: 2rem;
     height: 30vh;
     line-height: 3rem;
@@ -611,6 +632,7 @@ body {
     cursor: pointer;
     border: none;
     color: rgba(255, 255, 255, 0.5);
+    font-family: 'Hind', sans-serif;
     font-size: 2.5vh;
     border-radius: 4px;
     box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -691,7 +713,7 @@ body {
         font-size: 4vh;
     }
 
-    .profile-card header h2 {
+    .profile-card header h3 {
         margin-top: 1vh;
     }
 
@@ -716,7 +738,7 @@ body {
         width: 75vw;
     }
 
-    .projects h2 {
+    .projects h3 {
         font-size: 3rem;
         padding: 1.5rem 2rem;
     }
@@ -821,14 +843,22 @@ body {
         flex-wrap: wrap;
     }
 
+    #portfolio h2 {
+        font-size: 10vh;
+        letter-spacing: 2px;
+        text-align: center;
+        width: 80vw;
+    }
+
     .projects {
         justify-content: space-around;
         width: 40vw;
         height: 85vh;
     }
 
-    .projects h2 {
+    .projects h3 {
         font-size: 6vh;
+        line-height: 5.5vh;
         padding: 2vh 5vh;
     }
 
