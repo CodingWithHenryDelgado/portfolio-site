@@ -8,7 +8,7 @@ const info = document.getElementById("info");
 
 
 function showEmail() {
-    contactme.innerHTML = `<button class="noselect" id="email">CodingWHenry@gmail.com</button>`;
+    contactme.innerHTML = `<a class="noselect" id="email" href="mailto:CodingWHenry@gmail.com?subject=Nice to meet you!">CodingWHenry@gmail.com</button>`;
 }
 
 contactme.addEventListener("click", showEmail);

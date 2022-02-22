@@ -477,10 +477,11 @@ body {
 .projects img {
     padding: 2rem 0;
     height: 30vh;
-    width: auto;
+    width: 90%;
 }
 
 #github-picture {
+    height: 15vh;
     width: 90%;
 }
 
@@ -520,7 +521,7 @@ body {
     border-radius: 10px;
     color: #FFF;
     cursor: pointer;
-    font-size: 4vh;
+    font-size: 7vw;
     margin: 0.5rem 0;
     text-align: center;
     text-decoration: none;
@@ -585,55 +586,33 @@ body {
 
 #contactmebox {
     cursor: pointer;
+    width: 100vw;
 }
 
 .box {
     display: flex;
 }
 
-.box .inner {
-    width: 65vw;
-    height: 20vh;
-    line-height: 20vh;
+.inner {
+    background-color: var(--blue);
+    border-radius: 20px;
+    line-height: 10vh;
+    width: 100%;
     font-family: sans-serif;
+    font-size: 4vh;
     font-weight: bold;
     white-space: nowrap;
+    text-align: center;
     overflow: hidden;
 }
 
-.box .inner:first-child {
-    background-color: var(--blue);
-    color: var(--dark-blue);
-    transform-origin: right;
-    transform: perspective(100px) rotateY(-15deg);
-}
-
-.box .inner:last-child {
-    background-color: var(--light-blue);
-    color: antiquewhite;
-    transform-origin: left;
-    transform: perspective(100px) rotateY(15deg);
-}
-
-.box .inner span {
-    position: absolute;
-    font-size: 8vh;
-    animation: marquee 5s linear infinite;
-}
-
-.box .inner:first-child span {
-    animation-delay: 2.5s;
-    left: -100%;
-}
-
 #email {
-    width: 55vw;
-    height: 10vh;
+    width: 80vw;
     cursor: pointer;
     border: none;
     color: rgba(255, 255, 255, 0.5);
     font-family: 'Hind', sans-serif;
-    font-size: 2.5vh;
+    font-size: 5vw;
     border-radius: 4px;
     box-shadow: inset 0px 3px 5px rgba(255, 255, 255, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.15);
     background: rgb(2, 0, 36);
@@ -642,6 +621,8 @@ body {
     background-position: right;
     letter-spacing: 1px;
     transition: 1s;
+    padding: 2vh 0;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -687,11 +668,6 @@ body {
     background: linear-gradient(45deg, transparent 3%, #6B7CFF 3%, #6B7CFF 5%, #4758DD 55%);
     text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #6B7CFF;
     clip-path: var(--slice-0);
-}
-
-.links-buttons:hover:after {
-    animation: 1s glitchbutton;
-    animation-timing-function: steps(2, end);
 }
 
 .links-buttons a {
@@ -768,6 +744,15 @@ body {
         margin: 0 2%;
         padding: 1rem 0;
         width: 15rem;
+    }
+
+    .box {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .inner {
+        width: 50%;
     }
 
     #contact {
@@ -876,6 +861,10 @@ body {
         width: 100%;
     }
 
+    .box .inner span {
+        font-size: 4vw;
+    }
+
     .projects .buttons a {
         font-size: 4.5vh;
         padding: 1.5vh 0;
@@ -886,10 +875,6 @@ body {
     .links-buttons:after {
         font-size: 4vh;
         height: 15vh;
-    }
-
-    .box .inner span {
-        font-size: 13vh;
     }
 
     .social-media {
