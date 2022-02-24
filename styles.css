@@ -531,6 +531,38 @@ body {
 
 /* END OF PORTFOLIO */
 
+#skills {
+    background: #FFF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 5%;
+    width: 85%;
+}
+
+.one-skill {
+    border: 2px solid #000000;
+    border-radius: 20px;
+    margin: 5%;
+    padding: 5% 10%;
+}
+
+.one-skill ul {
+    list-style-type: circle;
+}
+
+.one-skill ul li {
+    font-size: 4vw;
+}
+
+.fa-brands,
+.fa-solid {
+    font-size: 5rem;
+}
+
 #contact {
     display: flex;
     justify-content: space-around;
@@ -641,24 +673,22 @@ body {
 
 #contact p {
     color: #FFF;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Rambla', sans-serif;
     font-size: 8vw;
     padding: 10vh 0 0 0;
-    text-decoration: underline;
+    text-align: center;
 }
 
 /* CSS */
 .links-buttons,
 .links-buttons:after {
-    content: "Interested?";
     width: 150px;
     height: 76px;
     margin: 2vh 0;
     line-height: 78px;
     font-size: 20px;
     font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, #192370 5%);
-    border: 0;
+    background: linear-gradient(180deg, rgba(25, 35, 112, 1) 0%, rgba(25, 35, 112, 1) 71%, rgba(6, 6, 32, 1) 71%);
     color: #fff;
     letter-spacing: 3px;
     box-shadow: 6px 0px 0px #6B7CFF;
@@ -667,18 +697,6 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-}
-
-.links-buttons:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #6B7CFF 3%, #6B7CFF 5%, #4758DD 55%);
-    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #6B7CFF;
-    clip-path: var(--slice-0);
 }
 
 .links-buttons a {
@@ -914,7 +932,7 @@ body {
     }
 
     #contact p {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
 
