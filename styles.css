@@ -468,17 +468,20 @@ body {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     color: #FFF;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: 10vw;
     font-family: 'Hind Vadodara', sans-serif;
-    line-height: 7vh;
     text-align: center;
     padding: 1rem 1.5rem;
 }
 
 .projects img {
     padding: 2rem 0;
-    height: 30vh;
-    width: 45%;
+    height: 25vh;
+    width: auto;
+}
+
+#journal-picture {
+    width: 95%;
 }
 
 #github-picture {
@@ -522,7 +525,7 @@ body {
     border-radius: 10px;
     color: #FFF;
     cursor: pointer;
-    font-size: 4vw;
+    font-size: 6vw;
     margin: 0.5rem 0;
     text-align: center;
     text-decoration: none;
@@ -538,29 +541,52 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    text-transform: uppercase;
+    font-family: 'Rambla', sans-serif;
     text-align: center;
     padding: 5%;
     width: 85%;
 }
 
+#skills h3 {
+    font-weight: bold;
+    font-size: 10vw;
+    text-decoration: underline;
+}
+
 .one-skill {
-    border: 2px solid #000000;
+    border: 2px solid var(--dark-gold);
+    background: var(--gold);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     border-radius: 20px;
+    color: #FFF;
+    font-family: 'Rambla', sans-serif;
     margin: 5%;
     padding: 5% 10%;
 }
 
+.one-skill h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10vw;
+}
+
 .one-skill ul {
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 .one-skill ul li {
     font-size: 4vw;
+    font-family: 'Hind Vadodara', sans-serif;
+    line-height: 5vw;
+    margin: 5% 0;
 }
 
 .fa-brands,
 .fa-solid {
     font-size: 5rem;
+    margin: 5%;
 }
 
 #contact {
@@ -820,6 +846,42 @@ body {
         padding: 2vh 0;
     }
 
+    #skills {
+        width: 75%;
+    }
+
+    #skills h3 {
+        font-size: 8vw;
+    }
+
+    .all-skills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .one-skill {
+        height: 50%;
+        margin: 2%;
+        padding: 5%;
+        width: 45%;
+    }
+
+    .one-skill h4 {
+        font-size: 4vw;
+    }
+
+    .one-skill ul li {
+        font-size: 1.8vw;
+        line-height: 3vw;
+        margin: 0;
+    }
+
+    .fa-brands,
+    .fa-solid {
+        font-size: 3rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -914,11 +976,53 @@ body {
         font-size: 4vw;
     }
 
+    #skills {
+        padding: 2% 5%;
+        width: 90%;
+    }
+
+    #skills h3 {
+        font-size: 5vw;
+    }
+
+    .all-skills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .one-skill {
+        height: auto;
+        margin: 2%;
+        padding: 2%;
+        width: 40%;
+    }
+
+    .one-skill h4 {
+        font-size: 2vw;
+    }
+
+    .one-skill ul {
+        padding: 0 10%;
+    }
+
+    .one-skill ul li {
+        font-size: 1rem;
+        line-height: 2vw;
+    }
+
+    .fa-brands,
+    .fa-solid {
+        font-size: 6rem;
+    }
+
     .links-buttons,
     .links-buttons:after {
         font-size: 4vh;
         height: 15vh;
     }
+
 
     #email {
         font-size: 2.5vw;
