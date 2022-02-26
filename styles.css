@@ -379,13 +379,13 @@ body {
 
 .profile-card .profile-bio {
     width: 75vw;
-    height: 30vh;
+    height: 70vh;
     padding: 15px 20px 0px 20px;
     border-top: 5px dashed #EEEEEE;
     background: #FFFFFF;
     color: #333333;
     font-family: 'Hind', sans-serif;
-    font-size: 1.4vw;
+    font-size: 5vw;
     margin-top: 50px;
     line-height: 1.5rem;
     text-align: center;
@@ -581,6 +581,7 @@ body {
     font-family: 'Hind Vadodara', sans-serif;
     line-height: 5vw;
     margin: 5% 0;
+    text-align: left;
 }
 
 .fa-brands,
@@ -749,14 +750,14 @@ body {
     }
 
     .profile-card .profile-bio {
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         text-align: left;
-        height: 35vh;
+        height: 55vh;
         line-height: 4vh;
     }
 
     .profile-social-links {
-        padding: 25px 20px 0 20px;
+        padding: 75px 20px 0 20px;
     }
 
     .profile-social-links li a {
@@ -856,7 +857,7 @@ body {
 
     .all-skills {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
     }
@@ -865,7 +866,7 @@ body {
         height: 50%;
         margin: 2%;
         padding: 5%;
-        width: 45%;
+        width: 75%;
     }
 
     .one-skill h4 {
@@ -873,7 +874,7 @@ body {
     }
 
     .one-skill ul li {
-        font-size: 1.8vw;
+        font-size: 2vw;
         line-height: 3vw;
         margin: 0;
     }
