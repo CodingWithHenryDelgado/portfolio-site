@@ -18,6 +18,7 @@ function goToSection() {
     input.checked = false;
 }
 
+//Added to every list item in nav
 about.addEventListener("click", goToSection);
 portfolio.addEventListener("click", goToSection);
 contact.addEventListener("click", goToSection);
