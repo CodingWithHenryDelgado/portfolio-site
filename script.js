@@ -1,5 +1,6 @@
 const about = document.getElementById("about-nav");
 const portfolio = document.getElementById("portfolio-nav");
+const skills = document.getElementById("skill-nav");
 const contact = document.getElementById("contact-nav");
 const input = document.getElementById("menu-icon");
 const body = document.querySelector("body");
@@ -21,4 +22,5 @@ function goToSection() {
 //Added to every list item in nav
 about.addEventListener("click", goToSection);
 portfolio.addEventListener("click", goToSection);
+skills.addEventListener("click", goToSection);
 contact.addEventListener("click", goToSection);

@@ -486,7 +486,7 @@ body {
 
 #github-picture {
     height: 20vh;
-    width: 90%;
+    width: 100%;
 }
 
 .projects p {
@@ -785,8 +785,8 @@ body {
         width: auto;
     }
 
-    #github-picture {
-        width: 80%;
+    #journal-picture {
+        width: 100%;
     }
 
     .projects p {
