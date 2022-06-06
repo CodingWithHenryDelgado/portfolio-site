@@ -1,3 +1,4 @@
 google.com, pub-6765712897857272, DIRECT, f08c47fec0942fa0
 smartadserver.com, 4194, DIRECT
 openx.com, 557337260, DIRECT, 6a698e2ec38604c6
+facebook.com, 375629514609624, DIRECT, c3e20eee3f780d68
