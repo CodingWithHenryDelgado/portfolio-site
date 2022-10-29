@@ -55,7 +55,6 @@ body {
     color: var(--dark-blue);
 }
 
-
 .background {
     position: absolute;
     left: 0;
@@ -106,6 +105,7 @@ svg {
 }
 
 .slides {
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,7 +146,7 @@ svg {
 
 #selfie {
     animation: border-transform 7s linear infinite;
-    background-color: #edf3f8;
+    background-color: #D0D6DA;
     box-shadow:
         7.2px 10.1px 0px rgba(0, 0, 0, 0.07),
         8.6px 12px 0px rgba(0, 0, 0, 0.03),
@@ -154,6 +154,58 @@ svg {
         10px 14px 0px rgba(0, 0, 0, 0.015);
     height: 200px;
     width: 200px;
+}
+
+@media (min-width: 768px) {
+    .about {
+        display: inline-grid;
+        grid-template-columns: 65% 35%;
+        max-width: 750px;
+        padding: 5%;
+    }
+
+    .about h1 {
+        font-size: 2.4rem;
+    }
+
+    .name {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .bio {
+        grid-column-start: 1;
+        line-height: 2rem;
+        margin: 5% 0;
+    }
+
+    .selfie {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    #selfie {
+        margin: 5% 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slides {
+        width: 80%;
+    }
+
+    .about {
+        grid-template-columns: 50% 50%;
+        padding: 5%;
+    }
+
+    #selfie {
+        height: 250px;
+        margin: 0;
+        width: 250px;
+    }
 }
 
 @keyframes border-transform {
@@ -187,7 +239,3 @@ svg {
         border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
     }
 }
-
-@media (min-width: 768px) {}
-
-@media (min-width: 1024px) {}
