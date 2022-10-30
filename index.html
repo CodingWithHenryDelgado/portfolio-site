@@ -22,23 +22,104 @@
 </head>
 
 <body>
-    <div class="background"></div>
-    <div class="slides">
-        <div class="about">
-            <div class="name">
-                <h1>Henry Delgado</h1>
-            </div>
-            <div class="bio">
-                <p>Hey! My name is Henry Delgado and I am a Front End Developer! After I deployed my first app on the
-                    Play Store, I looked into Front End Development and now here we are! If I'm not
-                    coding websites or apps, I'm usually playing video games or 3D printing.</p>
-            </div>
-            <div class="selfie">
-                <img id="selfie" src="./img/selfie-2.png" alt="A selfie of yours truly!" />
+    <div class="container">
+        <div class="background"></div>
+        <div class="child">
+            <div class="about">
+                <div class="name">
+                    <h1>Henry Delgado</h1>
+                </div>
+                <div class="bio">
+                    <p>Hey! My name is Henry Delgado and I am a Front End Developer! After I deployed my first app on
+                        the
+                        Play Store, I looked into Front End Development and now here we are! If I'm not
+                        coding websites or apps, I'm usually playing video games or 3D printing.</p>
+                </div>
+                <div class="selfie">
+                    <img id="selfie" src="./img/selfie-2.png" alt="A selfie of yours truly!" />
+                </div>
             </div>
         </div>
-    </div>
-    <!-- <div id="header">
+
+        <div class="child">
+            <div class="projects">
+                <div>
+                    <h2>Projects</h2>
+                </div>
+                <div class="project">
+                    <img src="./img/centercentre.png" alt="Center Centre logo">
+                    <img src="./img/t-icon.png" alt="The Lifedu Icon">
+                    <img src="./img/wordpress.png" alt="Glitch Blog">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="child">
+            <div id="skills">
+                <h3>My skills!</h3>
+                <div class="all-skills">
+                    <div class="one-skill">
+                        <h5>HTML5</h5>
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>Github</h5>
+                        <i class="fa-brands fa-github-alt"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>CSS3</h5>
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>Mailchimp</h5>
+                        <i class="fa-brands fa-mailchimp"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>JS</h5>
+                        <i class="fa-brands fa-js-square"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>WordPress</h5>
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>React</h5>
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="one-skill">
+                        <h5>Stripe</h5>
+                        <i class="fa-brands fa-stripe"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="child">
+            <div id="contact">
+                <h4>Contact info</h4>
+                <div class="links">
+                    <p>Shoot me an email here!</p>
+                    <a class="noselect" id="email"
+                        href="mailto:CodingWHenry@gmail.com?subject=Nice to meet you!">CodingWHenry@gmail.com</a>
+                    <p>Name: Henry Delgado</p>
+                </div>
+                <div class="info" id="info">
+                    <div class="social-media">
+                        <a href="https://twitter.com/Glitch_Delgado" class="twitter" target="_blank">
+                            <img src="./img/frontview/Twitter.png" alt="Twitter Icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/henrydelgadodeveloper/" class="linkedin" target="_blank">
+                            <img src="./img/frontview/LinkedIn.png" alt="Linkedin Icon" />
+                        </a>
+                        <a href="https://github.com/HenryDelGlitch" class="github" target="_blank">
+                            <img src="./img/frontview/github.png" alt="Github Icon" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="header">
             <div id="logo">
                 <p>Henry Del<span>Glitch</span></p>
             </div>
@@ -56,132 +137,10 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top">&#8593;</button>
         <div id="about">
         </div>
-        <div id="portfolio">
-            <h2>Projects</h2>
-            <div class="projects">
-                <h3>The Lifedu</h3>
-                <a href="https://henrydelglitch.github.io/the-lifedu/" target="_blank">
-                    <img src="./img/t-icon.png" alt="The Lifedu Icon" />
-                </a>
-                <div class="languages">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JS</p>
-                </div>
-                <p>A responsive page for an e-learning platform that focuses on teaching life skills and mental health
-                    education to students.</p>
-                <div class="buttons">
-                    <a href="https://henrydelglitch.github.io/the-lifedu/" target="_blank">View site</a>
-                    <a href="https://github.com/HenryDelGlitch/the-lifedu" target="_blank">View code</a>
-                </div>
-            </div>
-            <div class="projects">
-                <h3>Glitch Blog</h3>
-                <a href="https://glitchblog.site/" target="_blank">
-                    <img src="./img/wordpress.png" alt="Wordpress Icon" />
-                </a>
-                <div class="languages">
-                    <p>Wordpress</p>
-                    <p>PHP</p>
-                    <p>CSS</p>
-                </div>
-                <p>A responsive Wordpress blog where I write about my ideas, upcoming projects, and some random snippets
-                    about my life!</p>
-                <div class="buttons">
-                    <a href="https://glitchblog.site/" target="_blank">View site</a>
-                    <a href="https://github.com/HenryDelGlitch/glitchblog-theme" target="_blank">View code</a>
-                </div>
-            </div>
-            <div class="projects">
-                <h3>Inspirational Journal</h3>
-                <a href="http://inspirationalhomepage.website/" target="_blank">
-                    <img id="journal-picture" src="./img/journal.png" alt="Journal screenshot" />
-                </a>
-                <div class="languages">
-                    <p>React</p>
-                    <p>Redux</p>
-                    <p>CSS</p>
-                </div>
-                <p>A TODO list with inspirational quotes to motivate you with lovely photos in the background. Also
-                    shows
-                    you your local weather information.</p>
-                <div class="buttons">
-                    <a href="http://inspirationalhomepage.website/" target="_blank">View site</a>
-                    <a href="https://github.com/HenryDelGlitch/weatherAppPortfolio" target="_blank">View code</a>
-                </div>
-            </div>
-            <div class="projects">
-                <h3>Github Repo Gallery</h3>
-                <a href="https://henrydelglitch.github.io/github-repo-gallery/" target="_blank">
-                    <img id="github-picture" src="./img/github-repo.png" alt="Wordpress Icon" />
-                </a>
-                <div class="languages">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JS</p>
-                </div>
-                <p>A Github Repo gallery that shows all my public repos! You can search for a specific one or scroll
-                    through
-                    the list. Click on the repos for more information!</p>
-                <div class="buttons">
-                    <a href="https://henrydelglitch.github.io/github-repo-gallery/" target="_blank">View site</a>
-                    <a href="https://github.com/HenryDelGlitch/github-repo-gallery" target="_blank">View code</a>
-                </div>
-            </div>
-        </div>
-        <div id="skills">
-            <h3>My skills!</h3>
-            <div class="all-skills">
-                <div class="one-skill">
-                    <h4>HTML5</h4>
-                    <i class="fa-brands fa-html5"></i>
-                </div>
-                <div class="one-skill">
-                    <h4>CSS3</h4>
-                    <i class="fa-brands fa-css3"></i>
-                </div>
-                <div class="one-skill">
-                    <h4>JavaScript</h4>
-                    <i class="fa-brands fa-js-square"></i>
-                </div>
-                <div class="one-skill">
-                    <h4>Github</h4>
-                    <i class="fa-brands fa-github-alt"></i>
-                </div>
-                <div class="one-skill">
-                    <h4>React</h4>
-                    <i class="fa-brands fa-react"></i>
-                </div>
-            </div>
-        </div>
-        <div id="contact">
-            <p>Contact info for<br>Henry Delgado</p>
-            <div class="links">
-                <a href="#about" class="links-buttons" id="about-button">About Me</a>
-                <a href="#portfolio" class="links-buttons" id="portfolio-button">Portfolio</a>
-            </div>
-            <div class="info" id="info">
-                <div class="box" id="contactmebox">
-                    <div class="inner">
-                        <span>Click Me</span>
-                    </div>
-                </div>
-                <div class="social-media">
-                    <a href="https://twitter.com/Glitch_Delgado" class="twitter" target="_blank">
-                        <img src="./img/frontview/Twitter.png" alt="Twitter Icon" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/glitchdelgado/" class="linkedin" target="_blank">
-                        <img src="./img/frontview/LinkedIn.png" alt="Linkedin Icon" />
-                    </a>
-                    <a href="https://github.com/HenryDelGlitch" class="github" target="_blank">
-                        <img src="./img/frontview/github.png" alt="Github Icon" />
-                    </a>
-                </div>
-            </div>
         </div> -->
-    <script src="https://kit.fontawesome.com/899031a80d.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://kit.fontawesome.com/899031a80d.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

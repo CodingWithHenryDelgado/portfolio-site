@@ -6,31 +6,33 @@
 
 body {
     align-items: center;
-    background:
-        linear-gradient(to bottom right, var(--blue) 15%, transparent),
-        radial-gradient(circle at 100% 0%, rgba(255, 255, 255, .2) 10%, transparent 20%) center center / 15px 15px,
-        linear-gradient(to bottom right, var(--blue), var(--light-blue));
+    background: -moz-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
+    background: radial-gradient(ellipse at center, #edf3f8 1%, #dee3e8 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100vw;
-    overflow: hidden;
 }
 
 :root {
-    --slice-0: inset(50% 50% 50% 50%);
-    --slice-1: inset(80% -6px 0 0);
-    --slice-2: inset(50% -6px 30% 0);
-    --slice-3: inset(10% -6px 85% 0);
-    --slice-4: inset(40% -6px 43% 0);
-    --slice-5: inset(80% -6px 5% 0);
-    --blue: #3C4BBD;
-    --dark-blue: #192370;
-    --light-blue: #57ADD8;
-    --gold: #BDA03C;
-    --dark-gold: #705A0D;
+    --react-blue: #61DBFB;
+}
+
+a {
+    color: #000;
+    font-family: 'Nunito' !important;
+    font-style: italic !important;
+    font-weight: bold !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-decoration: underline;
 }
 
 #myBtn {
@@ -61,10 +63,6 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #edf3f8;
-    background: -moz-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
-    background: radial-gradient(ellipse at center, #edf3f8 1%, #dee3e8 100%);
     max-width: 100vw;
     max-height: 100vh;
     overflow: hidden;
@@ -83,8 +81,8 @@ body {
 }
 
 .rhombus {
-    fill: #61DBFB;
-    stroke: #61DBFB;
+    fill: var(--react-blue);
+    stroke: var(--react-blue);
 }
 
 .x {
@@ -104,16 +102,30 @@ svg {
     z-index: 0;
 }
 
-.slides {
-    background: transparent;
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 100vh;
+    scroll-snap-type: y mandatory;
     z-index: 99999999;
 }
 
-.about {
+.child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 90%;
+}
+
+.about,
+.projects,
+#skills,
+#contact {
     background-color: #FFF;
     border-radius: 10px;
     box-shadow:
@@ -123,7 +135,8 @@ svg {
         10px 14px 0px rgba(0, 0, 0, 0.015);
     font-family: 'Comfortaa', cursive;
     text-align: center;
-    padding: 10%;
+    margin: 5% 0;
+    padding: 5%;
     width: 90%;
 }
 
@@ -135,7 +148,7 @@ svg {
 .bio {
     font-family: 'Nunito', sans-serif;
     line-height: 1.2rem;
-    margin: 5px 0;
+    margin: 5% 0;
     text-align: left;
 }
 
@@ -154,6 +167,92 @@ svg {
         10px 14px 0px rgba(0, 0, 0, 0.015);
     height: 200px;
     width: 200px;
+}
+
+.projects {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects img {
+    height: auto;
+    max-height: 100px;
+    margin: 10% 0;
+    width: 100px;
+}
+
+.projects i {
+    color: var(--react-blue);
+    font-size: 100px;
+}
+
+#skills h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.all-skills {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    max-width: 750px;
+    padding: 5%;
+    width: 100%;
+}
+
+.one-skill {
+    margin: 10%;
+}
+
+
+.one-skill i {
+    font-size: 64px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+#contact h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#contact a {
+    text-decoration: none;
+}
+
+#contact img {
+    height: 50px;
+    width: 50px;
+}
+
+.links {
+    display: inline-grid;
+    margin: 10% 0;
+}
+
+.links a {
+    font-size: 1em;
+    margin: 5% 0;
+}
+
+.social-media {
+    width: 100%;
+}
+
+.social-media a {
+    margin: 10% 0;
 }
 
 @media (min-width: 768px) {
@@ -188,6 +287,36 @@ svg {
 
     #selfie {
         margin: 5% 0;
+    }
+
+    .project {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .all-skills {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    #contact {
+        font-size: 1.5rem;
+    }
+
+    #contact h4 {
+        font-size: 3rem;
+    }
+
+    .links {
+        margin: 5% 0;
+    }
+
+    #info {
+        width: 100%;
+    }
+
+    #contact img {
+        height: 75px;
+        width: 75px;
     }
 }
 
