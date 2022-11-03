@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600');
-
 * {
     box-sizing: border-box;
 }
@@ -47,6 +45,8 @@ h1,
 h2,
 h3,
 h4 {
+    color: #24212A;
+    font-family: 'Cabin', cursive;
     text-decoration: underline;
 }
 
@@ -215,7 +215,7 @@ svg {
     height: 100vh;
     overflow-x: hidden;
     position: relative;
-    scroll-snap-type: y;
+    scroll-snap-type: y mandatory;
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */
     scrollbar-width: none;
@@ -254,16 +254,18 @@ svg {
         8.6px 12px 0px rgba(0, 0, 0, 0.03),
         9.4px 13.2px 0px rgba(0, 0, 0, 0.021),
         10px 14px 0px rgba(0, 0, 0, 0.015);
-    font-family: 'Comfortaa', cursive;
+    color: #24212A;
+    font-family: 'Cabin', cursive;
     text-align: center;
     margin: 5% 0;
-    padding: 5%;
+    padding: 10%;
     width: 90%;
 }
 
 .about h1 {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+    text-align: left;
 }
 
 .bio {
@@ -295,11 +297,13 @@ svg {
     font-weight: bold;
 }
 
+.projects h2 {
+    margin-bottom: 15%;
+}
+
 .project {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .projects img {
@@ -307,6 +311,12 @@ svg {
     max-height: 100px;
     margin: 10% 0;
     width: 100px;
+}
+
+.projects img:hover,
+.social-media i:hover {
+    transform: scale(1.8);
+    transition: 0.5s;
 }
 
 .projects i {
@@ -317,6 +327,7 @@ svg {
 #skills h3 {
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 10%;
 }
 
 .all-skills {
@@ -369,10 +380,12 @@ svg {
 }
 
 .social-media {
+    font-size: 48px;
     width: 100%;
 }
 
 .social-media a {
+    color: #24212A;
     margin: 10% 0;
 }
 
@@ -385,7 +398,7 @@ svg {
     }
 
     .about h1 {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .name {
@@ -407,24 +420,51 @@ svg {
     }
 
     #selfie {
-        margin: 5% 0;
+        margin: 20% 0;
     }
 
-    .about,
     .projects,
     #skills,
     #contact {
+        padding: 5% 0;
         max-width: 750px;
     }
 
     .project {
-        flex-direction: row;
-        justify-content: space-around;
-        max-width: 750px;
+        width: 100%;
+    }
+
+    .projects h2 {
+        font-size: 4rem;
+        margin-bottom: 5%;
+    }
+
+    .projects img {
+        margin: 7%;
+        max-height: 125px;
+        width: 125px;
+    }
+
+    #centercentre {
+        margin: 0% 7% 11% 7%;
+    }
+
+    #skills h3 {
+        font-size: 4rem;
+        margin-bottom: 0;
     }
 
     .all-skills {
         grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .one-skill {
+        margin: 15% 10%;
+    }
+
+    .one-skill h5 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
     }
 
     #contact {
@@ -447,6 +487,10 @@ svg {
         height: 75px;
         width: 75px;
     }
+
+    .social-media i {
+        margin: 0 5%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -455,14 +499,49 @@ svg {
     }
 
     .about {
+        height: auto;
         grid-template-columns: 50% 50%;
+        max-height: 75vh;
+        max-width: 950px;
         padding: 5%;
     }
 
+    .projects,
+    #skills,
+    #contact {
+        height: auto;
+        max-height: 75vh;
+        max-width: 900px;
+    }
+
+    .bio {
+        font-size: 1.5rem;
+    }
+
     #selfie {
-        height: 250px;
-        margin: 0;
-        width: 250px;
+        height: 300px;
+        margin: 8% 0;
+        width: 300px;
+    }
+
+    .projects img {
+        margin: 2% 3%;
+    }
+
+    #centercentre {
+        margin: 0% 2% 6% 2%;
+    }
+
+    #contact h4 {
+        font-size: 4rem;
+    }
+
+    .social-media {
+        font-size: 64px;
+    }
+
+    .links {
+        font-size: 2rem;
     }
 }
 
