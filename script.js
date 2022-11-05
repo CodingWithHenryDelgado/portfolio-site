@@ -6,7 +6,9 @@
 // const body = document.querySelector("body");
 // const contactme = document.getElementById("contactmebox");
 // const info = document.getElementById("info");
+const menu = document.getElementById("menu");
 const centercentre = document.getElementById("centercentre");
+const thelifedu = document.getElementById("thelifedu");
 
 centercentre.addEventListener("click", function () {
     //Create container div to keep the iframe
@@ -60,13 +62,51 @@ centercentre.addEventListener("click", function () {
 
     getOut.appendChild(getOutText);
 
+    const htmlImage = document.createElement("img");
+
+    htmlImage.id = "HTML5"
+
+    htmlImage.src = "./img/html5.png";
+
+    htmlImage.alt = "HTML5 Icon";
+
+    const cssImage = document.createElement("img");
+
+    cssImage.id = "CSS3"
+
+    cssImage.src = "./img/css3.png";
+
+    cssImage.alt = "CSS3 Icon";
+
+    const wordPressImage = document.createElement("img");
+
+    wordPressImage.id = "WP"
+
+    wordPressImage.src = "./img/wordpress.png";
+
+    wordPressImage.alt = "WordPress Icon";
+
+    const fileZillaImage = document.createElement("img");
+
+    fileZillaImage.id = "FileZilla"
+
+    fileZillaImage.src = "./img/filezilla.png";
+
+    fileZillaImage.alt = "FileZilla Icon";
+
     const ccHeader = document.createElement("h2");
 
-    ccHeader.id = 'ccHeader'
+    ccHeader.id = 'ccHeader';
+
+    const ccHeaderLink = document.createElement("a");
+
+    ccHeaderLink.href = 'https://www.uie.com/';
 
     const ccHeaderText = document.createTextNode("UIE - Redesign Project");
 
-    ccHeader.appendChild(ccHeaderText);
+    ccHeaderLink.appendChild(ccHeaderText);
+
+    ccHeader.appendChild(ccHeaderLink);
 
     containerDescription.appendChild(site);
 
@@ -81,6 +121,139 @@ centercentre.addEventListener("click", function () {
     containerDescription.appendChild(siteCode);
 
     containerDescription.appendChild(getOut);
+
+    containerDescription.appendChild(htmlImage);
+
+    containerDescription.appendChild(cssImage);
+
+    containerDescription.appendChild(wordPressImage);
+
+    containerDescription.appendChild(fileZillaImage);
+
+    containerDescription.appendChild(ccHeader);
+
+    window.appendChild(containerDescription);
+
+    document.body.appendChild(window);
+
+    getOut.onclick = function () {
+        document.body.removeChild(window);
+    }
+})
+
+thelifedu.addEventListener("click", function () {
+    //Create container div to keep the iframe
+    const window = document.createElement("div");
+    window.id = "container-iframe"
+
+    //Create the iframe element with the site
+    const site = document.createElement("iframe");
+    site.id = 'cc-iframe';
+    site.src = 'https://henrydelglitch.github.io/the-lifedu/';
+    site.title = 'UIE website';
+
+    const containerDescription = document.createElement("div");
+    containerDescription.id = 'cc-info'
+
+    const description = document.createElement("p");
+    const text = document.createTextNode("During my first month, I was given illustrator and Figma files to build their site from scratch. I would show my progress to the Senior Developer, Abhinav Manohar and he would give me feedback.")
+
+    const descriptionTwo = document.createElement("p");
+    const textTwo = document.createTextNode("Every week, the whole team would have a Zoom meeting (India and USA). I would show my progress on the site, then once we agree the page was complete, the Designer, Shradha of the team would give me more pages to create and work on.");
+
+    const siteButton = document.createElement("a");
+
+    siteButton.id = 'siteButton';
+
+    siteButton.href = 'https://henrydelglitch.github.io/the-lifedu/';
+
+    siteButton.target = '_blank';
+
+    const siteButtonText = document.createTextNode("View Site");
+
+    siteButton.appendChild(siteButtonText);
+
+    const siteCode = document.createElement("a");
+
+    siteCode.id = 'siteCode';
+
+    siteCode.target = '_blank';
+
+    siteCode.href = 'https://github.com/HenryDelGlitch/the-lifedu';
+
+    const siteCodeText = document.createTextNode("Github Code");
+
+    siteCode.appendChild(siteCodeText);
+
+    description.appendChild(text);
+
+    descriptionTwo.appendChild(textTwo);
+
+    const getOut = document.createElement("button");
+
+    getOut.id = 'closeButton';
+
+    const getOutText = document.createTextNode("X");
+
+    getOut.appendChild(getOutText);
+
+    const htmlImage = document.createElement("img");
+
+    htmlImage.id = "HTML5"
+
+    htmlImage.src = "./img/html5.png";
+
+    htmlImage.alt = "HTML5 Icon";
+
+    const cssImage = document.createElement("img");
+
+    cssImage.id = "CSS3"
+
+    cssImage.src = "./img/css3.png";
+
+    cssImage.alt = "CSS3 Icon";
+
+    const jsImage = document.createElement("img");
+
+    jsImage.id = "JS"
+
+    jsImage.src = "./img/js.png";
+
+    jsImage.alt = "JS Icon";
+
+    const ccHeader = document.createElement("h2");
+
+    ccHeader.id = 'lifeduHeader';
+
+    const ccHeaderLink = document.createElement("a");
+
+    ccHeaderLink.href = 'https://github.com/HenryDelGlitch/the-lifedu';
+
+    const ccHeaderText = document.createTextNode("The Lifedu");
+
+    ccHeaderLink.appendChild(ccHeaderText);
+
+    ccHeader.appendChild(ccHeaderLink);
+
+    containerDescription.appendChild(site);
+
+    containerDescription.appendChild(description);
+
+    containerDescription.appendChild(descriptionTwo);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(siteButton);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(getOut);
+
+    containerDescription.appendChild(htmlImage);
+
+    containerDescription.appendChild(cssImage);
+
+    containerDescription.appendChild(jsImage);
 
     containerDescription.appendChild(ccHeader);
 

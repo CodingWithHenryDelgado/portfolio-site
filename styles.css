@@ -208,9 +208,8 @@ svg {
 
 #container-iframe {
     width: 90vw !important;
-    height: 75vh;
+    height: 90vh;
     position: absolute;
-    top: 5%;
     z-index: 999999999999;
 }
 
@@ -274,7 +273,8 @@ svg {
 
 #closeButton:hover,
 #siteButton:hover,
-#siteCode:hover {
+#siteCode:hover,
+#ccHeader a:hover {
     border-color: #06f;
     color: #06f;
     fill: #06f;
@@ -282,7 +282,8 @@ svg {
 
 #closeButton:active,
 #siteButton:active,
-#siteCode:active {
+#siteCode:active,
+#ccHeader a:active {
     border-color: #06f;
     color: #06f;
     fill: #06f;
@@ -292,7 +293,20 @@ svg {
     font-weight: bold;
     font-size: 1.1rem;
     position: absolute;
-    top: 5%;
+    text-decoration: none;
+    top: 1%;
+}
+
+#HTML5 {
+    display: none;
+}
+
+#lifeduHeader {
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    text-decoration: none;
+    top: 3%;
 }
 
 .child {
@@ -464,14 +478,18 @@ svg {
         padding: 1% 4%;
     }
 
-    #ccHeader {
+    #lifeduHeader {
+        font-size: 3rem;
+    }
+
+    #ccHeader a {
         font-size: 3rem;
         text-decoration: none;
         top: 2%;
     }
 
     #cc-info {
-        height: 90vh;
+        height: 100%;
         padding-top: 10%;
     }
 
@@ -481,8 +499,41 @@ svg {
 
     #cc-iframe {
         display: block;
-        height: 60%;
-        width: 100%;
+        height: 55%;
+        width: 90%;
+    }
+
+    #HTML5,
+    #WP,
+    #CSS3,
+    #JS,
+    #FileZilla {
+        display: block;
+        max-height: 50px;
+        max-width: 50px;
+        position: absolute;
+        right: 0;
+    }
+
+    #HTML5 {
+        top: 10%;
+    }
+
+    #WP {
+        top: 30%;
+    }
+
+    #CSS3 {
+        top: 20%;
+        right: 1%;
+    }
+
+    #JS {
+        top: 30%;
+    }
+
+    #FileZilla {
+        top: 40%;
     }
 
     #closeButton {
@@ -631,6 +682,27 @@ svg {
 
     #cc-info p {
         font-size: 1.4rem;
+    }
+
+    #HTML5 {
+        top: 12%;
+    }
+
+    #WP {
+        top: 32%;
+    }
+
+    #CSS3 {
+        top: 22%;
+        right: 1%;
+    }
+
+    #JS {
+        top: 32%;
+    }
+
+    #FileZilla {
+        top: 42%;
     }
 
     .projects,
