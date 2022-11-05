@@ -36,7 +36,7 @@ html::-webkit-scrollbar {
 
 a {
     color: #000;
-    font-family: 'Nunito' !important;
+    font-family: 'Cabin', cursive;
     font-style: italic !important;
     font-weight: bold !important;
 }
@@ -50,42 +50,20 @@ h4 {
     text-decoration: underline;
 }
 
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--dark-blue);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50px;
-    font-size: 18px;
-    width: 75px;
-}
-
-#myBtn:hover {
-    background-color: var(--gold);
-    color: var(--dark-blue);
-}
-
 .menu {
     position: sticky;
     top: 40px;
     padding: 30px;
-    background: #e8e8f3;
+    background: #FFF;
     border-radius: 100%;
     cursor: pointer;
-    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
+    box-shadow: 7px 7px 15px rgba(36, 50, 90, 0.3), -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, 0.2), inset 7px 7px 15px rgba(55, 84, 170, 0), inset -7px -7px 20px rgba(255, 255, 255, 0), 0px 0px 4px rgba(255, 255, 255, 0);
 }
 
 .menu::before,
 .menu::after {
     content: "";
-    background: #c3c2c7;
+    background: #807f83;
     border-radius: 5px;
     width: 30px;
     height: 5px;
@@ -228,6 +206,95 @@ svg {
     /* Safari and Chrome */
 }
 
+#container-iframe {
+    width: 90vw !important;
+    height: 75vh;
+    position: absolute;
+    top: 5%;
+    z-index: 999999999999;
+}
+
+#cc-iframe {
+    display: none;
+}
+
+#cc-info {
+    position: relative;
+    padding-top: 35%;
+}
+
+#cc-info p {
+    font-size: 1.25rem;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    padding: 0 10px;
+}
+
+#closeButton,
+#siteButton,
+#siteCode {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    fill: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    outline: 0;
+    margin: 10px 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+#closeButton:focus,
+#siteButton:focus,
+#siteCode:focus {
+    color: #171e29;
+}
+
+#closeButton:hover,
+#siteButton:hover,
+#siteCode:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+#closeButton:active,
+#siteButton:active,
+#siteCode:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+#ccHeader {
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 5%;
+}
+
 .child {
     display: flex;
     justify-content: center;
@@ -246,14 +313,14 @@ svg {
 .about,
 .projects,
 #skills,
-#contact {
+#contact,
+#container-iframe {
     background-color: #FFF;
     border-radius: 10px;
-    box-shadow:
-        7.2px 10.1px 0px rgba(0, 0, 0, 0.07),
-        8.6px 12px 0px rgba(0, 0, 0, 0.03),
-        9.4px 13.2px 0px rgba(0, 0, 0, 0.021),
-        10px 14px 0px rgba(0, 0, 0, 0.015);
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(36, 50, 90, 0.6) 0px 20px 30px -10px;
+    /* box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px; */
     color: #24212A;
     font-family: 'Cabin', cursive;
     text-align: center;
@@ -390,6 +457,47 @@ svg {
 }
 
 @media (min-width: 768px) {
+
+    #container-iframe {
+        top: 0;
+        height: 90vh;
+        padding: 1% 4%;
+    }
+
+    #ccHeader {
+        font-size: 3rem;
+        text-decoration: none;
+        top: 2%;
+    }
+
+    #cc-info {
+        height: 90vh;
+        padding-top: 10%;
+    }
+
+    #cc-info p {
+        padding: 2% 0;
+    }
+
+    #cc-iframe {
+        display: block;
+        height: 60%;
+        width: 100%;
+    }
+
+    #closeButton {
+        font-size: 1.5rem;
+        min-width: 75px;
+    }
+
+    #siteButton,
+    #siteCode {
+        display: inline-flex;
+        font-size: 1.5rem;
+        margin: 0 5%;
+        min-width: 250px;
+    }
+
     .about {
         display: inline-grid;
         grid-template-columns: 65% 35%;
@@ -504,6 +612,25 @@ svg {
         max-height: 75vh;
         max-width: 950px;
         padding: 5%;
+    }
+
+    #container-iframe {
+        margin: 2% 0;
+        max-height: 1000px;
+        max-width: 1000px;
+        padding: 0 4%;
+    }
+
+    #ccHeader {
+        top: 4%;
+    }
+
+    #closeButton {
+        top: 2%;
+    }
+
+    #cc-info p {
+        font-size: 1.4rem;
     }
 
     .projects,

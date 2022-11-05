@@ -1,48 +1,97 @@
-const about = document.getElementById("about-nav");
-const portfolio = document.getElementById("portfolio-nav");
-const skills = document.getElementById("skill-nav");
-const contact = document.getElementById("contact-nav");
-const input = document.getElementById("menu-icon");
-const body = document.querySelector("body");
-const contactme = document.getElementById("contactmebox");
-const info = document.getElementById("info");
+// const about = document.getElementById("about-nav");
+// const portfolio = document.getElementById("portfolio-nav");
+// const skills = document.getElementById("skill-nav");
+// const contact = document.getElementById("contact-nav");
+// const input = document.getElementById("menu-icon");
+// const body = document.querySelector("body");
+// const contactme = document.getElementById("contactmebox");
+// const info = document.getElementById("info");
+const centercentre = document.getElementById("centercentre");
 
-//Makes the click me button into a clickable email
-// function showEmail() {
-//   contactme.innerHTML = `<a class="noselect" id="email" href="mailto:CodingWHenry@gmail.com?subject=Nice to meet you!">CodingWHenry@gmail.com</button>`;
-// }
+centercentre.addEventListener("click", function () {
+    //Create container div to keep the iframe
+    const window = document.createElement("div");
+    window.id = "container-iframe"
 
-// contactme.addEventListener("click", showEmail);
+    //Create the iframe element with the site
+    const site = document.createElement("iframe");
+    site.id = 'cc-iframe';
+    site.src = 'https://www.uie.com/';
+    site.title = 'UIE website';
 
-// //Transforms nav back to a hamburger after a link is clicked
-// function goToSection() {
-//   input.checked = false;
-// }
+    const containerDescription = document.createElement("div");
+    containerDescription.id = 'cc-info'
 
-// //Added to every list item in nav
-// about.addEventListener("click", goToSection);
-// portfolio.addEventListener("click", goToSection);
-// skills.addEventListener("click", goToSection);
-// contact.addEventListener("click", goToSection);
-// //Get the button:
-// mybutton = document.getElementById("myBtn");
+    const description = document.createElement("p");
+    const text = document.createTextNode("I redesigned the main site of UIE with the help of the Lead of Marketing and Design, Summer, and my Manager, Marko. They both supplied me with the design template and helped me improve it when testing it's responsiveness.")
 
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () { scrollFunction() };
+    const descriptionTwo = document.createElement("p");
+    const textTwo = document.createTextNode(" I would use our test page in WordPress, in order to make sure the HTML code works well with our WordPress theme and if it's responsive. We went through several revisions until it was decided to use this on our main page.");
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-// }
+    const siteButton = document.createElement("a");
 
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }
+    siteButton.id = 'siteButton';
+
+    siteButton.href = 'https://www.uie.com/';
+
+    siteButton.target = '_blank';
+
+    const siteButtonText = document.createTextNode("View Site");
+
+    siteButton.appendChild(siteButtonText);
+
+    const siteCode = document.createElement("a");
+
+    siteCode.id = 'siteCode';
+
+    const siteCodeText = document.createTextNode("No Public Code!");
+
+    siteCode.appendChild(siteCodeText);
+
+    description.appendChild(text);
+
+    descriptionTwo.appendChild(textTwo);
+
+    const getOut = document.createElement("button");
+
+    getOut.id = 'closeButton';
+
+    const getOutText = document.createTextNode("X");
+
+    getOut.appendChild(getOutText);
+
+    const ccHeader = document.createElement("h2");
+
+    ccHeader.id = 'ccHeader'
+
+    const ccHeaderText = document.createTextNode("UIE - Redesign Project");
+
+    ccHeader.appendChild(ccHeaderText);
+
+    containerDescription.appendChild(site);
+
+    containerDescription.appendChild(description);
+
+    containerDescription.appendChild(descriptionTwo);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(siteButton);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(getOut);
+
+    containerDescription.appendChild(ccHeader);
+
+    window.appendChild(containerDescription);
+
+    document.body.appendChild(window);
+
+    getOut.onclick = function () {
+        document.body.removeChild(window);
+    }
+})
 
 class Particle {
 
@@ -136,3 +185,4 @@ function update() {
     requestAnimationFrame(update.bind(this))
 }
 update()
+
