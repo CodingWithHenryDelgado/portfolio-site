@@ -291,13 +291,22 @@ svg {
 
 #ccHeader {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     position: absolute;
+    text-align: left;
     text-decoration: none;
     top: 1%;
+    width: 75%;
 }
 
-#HTML5 {
+#HTML5,
+#CSS3,
+#JS,
+#WP,
+#FileZilla,
+#PHP,
+#REACT,
+#REDUX {
     display: none;
 }
 
@@ -307,6 +316,16 @@ svg {
     position: absolute;
     text-decoration: none;
     top: 3%;
+}
+
+#blogHeader {
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    text-align: left;
+    text-decoration: none;
+    top: 3%;
+    width: 75%;
 }
 
 .child {
@@ -482,6 +501,10 @@ svg {
         font-size: 3rem;
     }
 
+    #blogHeader {
+        font-size: 2rem;
+    }
+
     #ccHeader a {
         font-size: 3rem;
         text-decoration: none;
@@ -507,7 +530,10 @@ svg {
     #WP,
     #CSS3,
     #JS,
-    #FileZilla {
+    #FileZilla,
+    #PHP,
+    #REACT,
+    #REDUX {
         display: block;
         max-height: 50px;
         max-width: 50px;
@@ -515,11 +541,18 @@ svg {
         right: 0;
     }
 
-    #HTML5 {
+    #HTML5,
+    #REACT {
         top: 10%;
     }
 
-    #WP {
+    #PHP {
+        top: 13%;
+    }
+
+    #WP,
+    #JS,
+    #REDUX {
         top: 30%;
     }
 
@@ -528,17 +561,13 @@ svg {
         right: 1%;
     }
 
-    #JS {
-        top: 30%;
-    }
-
     #FileZilla {
         top: 40%;
     }
 
     #closeButton {
         font-size: 1.5rem;
-        min-width: 75px;
+        min-width: 60px;
     }
 
     #siteButton,
@@ -686,6 +715,14 @@ svg {
 
     #HTML5 {
         top: 12%;
+    }
+
+    #REACT {
+        top: 13%;
+    }
+
+    #PHP {
+        top: 15%;
     }
 
     #WP {

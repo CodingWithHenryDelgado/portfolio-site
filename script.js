@@ -1,14 +1,14 @@
-// const about = document.getElementById("about-nav");
-// const portfolio = document.getElementById("portfolio-nav");
-// const skills = document.getElementById("skill-nav");
-// const contact = document.getElementById("contact-nav");
-// const input = document.getElementById("menu-icon");
-// const body = document.querySelector("body");
-// const contactme = document.getElementById("contactmebox");
-// const info = document.getElementById("info");
+//TODO 
+// 1. Update Lifedu to have margin top where you meet Lif
+// 2. Update Homepage to scroll when there is overflow 
+// 3. Update the menu button to look good on tablet and desktop
+// 4. Update the skills to include bios idk
+
 const menu = document.getElementById("menu");
 const centercentre = document.getElementById("centercentre");
 const thelifedu = document.getElementById("thelifedu");
+const glitchBlog = document.getElementById("glitchBlog");
+const journal = document.getElementById("journal");
 
 centercentre.addEventListener("click", function () {
     //Create container div to keep the iframe
@@ -254,6 +254,256 @@ thelifedu.addEventListener("click", function () {
     containerDescription.appendChild(cssImage);
 
     containerDescription.appendChild(jsImage);
+
+    containerDescription.appendChild(ccHeader);
+
+    window.appendChild(containerDescription);
+
+    document.body.appendChild(window);
+
+    getOut.onclick = function () {
+        document.body.removeChild(window);
+    }
+})
+
+glitchBlog.addEventListener("click", function () {
+    //Create container div to keep the iframe
+    const window = document.createElement("div");
+    window.id = "container-iframe"
+
+    //Create the iframe element with the site
+    const site = document.createElement("iframe");
+    site.id = 'cc-iframe';
+    site.src = 'https://glitchblog.site/';
+    site.title = 'GlitchBlog';
+
+    const containerDescription = document.createElement("div");
+    containerDescription.id = 'cc-info'
+
+    const description = document.createElement("p");
+    const text = document.createTextNode("This is a WordPress blog I created using the SkillCrush theme as a starter boilerplate which I would mold into my own theme.")
+
+    const descriptionTwo = document.createElement("p");
+    const textTwo = document.createTextNode("Learning how to use Apache and XAMPP during this process was a headache but it was worth it. Now I have my own place to write my own thoughts and ideas!");
+
+    const siteButton = document.createElement("a");
+
+    siteButton.id = 'siteButton';
+
+    siteButton.href = 'https://glitchblog.site/';
+
+    siteButton.target = '_blank';
+
+    const siteButtonText = document.createTextNode("View Site");
+
+    siteButton.appendChild(siteButtonText);
+
+    const siteCode = document.createElement("a");
+
+    siteCode.id = 'siteCode';
+
+    siteCode.target = '_blank';
+
+    siteCode.href = 'https://github.com/HenryDelGlitch/glitchblog-theme';
+
+    const siteCodeText = document.createTextNode("View Theme");
+
+    siteCode.appendChild(siteCodeText);
+
+    description.appendChild(text);
+
+    descriptionTwo.appendChild(textTwo);
+
+    const getOut = document.createElement("button");
+
+    getOut.id = 'closeButton';
+
+    const getOutText = document.createTextNode("X");
+
+    getOut.appendChild(getOutText);
+
+    const phpImage = document.createElement("img");
+
+    phpImage.id = "PHP"
+
+    phpImage.src = "./img/php.png";
+
+    phpImage.alt = "PHP Icon";
+
+    const cssImage = document.createElement("img");
+
+    cssImage.id = "CSS3"
+
+    cssImage.src = "./img/css3.png";
+
+    cssImage.alt = "CSS3 Icon";
+
+    const wordPressImage = document.createElement("img");
+
+    wordPressImage.id = "WP";
+
+    wordPressImage.src = "./img/wordpress.png";
+
+    wordPressImage.alt = "WordPress Icon";
+
+    const ccHeader = document.createElement("h2");
+
+    ccHeader.id = 'blogHeader';
+
+    const ccHeaderLink = document.createElement("a");
+
+    ccHeaderLink.href = 'https://glitchblog.site/';
+
+    const ccHeaderText = document.createTextNode("My WordPress Blog - GlitchBlog");
+
+    ccHeaderLink.appendChild(ccHeaderText);
+
+    ccHeader.appendChild(ccHeaderLink);
+
+    containerDescription.appendChild(site);
+
+    containerDescription.appendChild(description);
+
+    containerDescription.appendChild(descriptionTwo);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(siteButton);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(getOut);
+
+    containerDescription.appendChild(phpImage);
+
+    containerDescription.appendChild(cssImage);
+
+    containerDescription.appendChild(wordPressImage);
+
+    containerDescription.appendChild(ccHeader);
+
+    window.appendChild(containerDescription);
+
+    document.body.appendChild(window);
+
+    getOut.onclick = function () {
+        document.body.removeChild(window);
+    }
+})
+
+journal.addEventListener("click", function () {
+    //Create container div to keep the iframe
+    const window = document.createElement("div");
+    window.id = "container-iframe"
+
+    //Create the iframe element with the site
+    const site = document.createElement("iframe");
+    site.id = 'cc-iframe';
+    site.src = 'http://inspirationalhomepage.website/';
+    site.title = 'An Inspirational Homepage';
+
+    const containerDescription = document.createElement("div");
+    containerDescription.id = 'cc-info'
+
+    const description = document.createElement("p");
+    const text = document.createTextNode("This is an inspirational homepage I created while learning Redux. This uses OpenWeather API, Inspirational Quotes API, and Image API.")
+
+    const descriptionTwo = document.createElement("p");
+    const textTwo = document.createTextNode("The OpenweatherAPI lets you see the zipcode current weather. Image API to get images to use as backgrounds, click on the arrows to change the background. Inspirational Quotes at the bottom of the screen to motivate you to finish your tasks. Once you finish a task, you can mark it as done which will throw confetti!");
+
+    const siteButton = document.createElement("a");
+
+    siteButton.id = 'siteButton';
+
+    siteButton.href = 'http://inspirationalhomepage.website/';
+
+    siteButton.target = '_blank';
+
+    const siteButtonText = document.createTextNode("View Site");
+
+    siteButton.appendChild(siteButtonText);
+
+    const siteCode = document.createElement("a");
+
+    siteCode.id = 'siteCode';
+
+    siteCode.target = '_blank';
+
+    siteCode.href = 'https://github.com/HenryDelGlitch/weatherAppPortfolio';
+
+    const siteCodeText = document.createTextNode("View Code");
+
+    siteCode.appendChild(siteCodeText);
+
+    description.appendChild(text);
+
+    descriptionTwo.appendChild(textTwo);
+
+    const getOut = document.createElement("button");
+
+    getOut.id = 'closeButton';
+
+    const getOutText = document.createTextNode("X");
+
+    getOut.appendChild(getOutText);
+
+    const reactImage = document.createElement("img");
+
+    reactImage.id = "REACT"
+
+    reactImage.src = "./img/react.png";
+
+    reactImage.alt = "React Icon";
+
+    const cssImage = document.createElement("img");
+
+    cssImage.id = "CSS3"
+
+    cssImage.src = "./img/css3.png";
+
+    cssImage.alt = "CSS3 Icon";
+
+    const reduxImage = document.createElement("img");
+
+    reduxImage.id = "REDUX";
+
+    reduxImage.src = "./img/redux.png";
+
+    reduxImage.alt = "Redux Icon";
+
+    const ccHeader = document.createElement("h2");
+
+    ccHeader.id = 'blogHeader';
+
+    const ccHeaderLink = document.createElement("a");
+
+    ccHeaderLink.href = 'http://inspirationalhomepage.website/';
+
+    const ccHeaderText = document.createTextNode("An Inspirational Homepage");
+
+    ccHeaderLink.appendChild(ccHeaderText);
+
+    ccHeader.appendChild(ccHeaderLink);
+
+    containerDescription.appendChild(site);
+
+    containerDescription.appendChild(description);
+
+    containerDescription.appendChild(descriptionTwo);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(siteButton);
+
+    containerDescription.appendChild(siteCode);
+
+    containerDescription.appendChild(getOut);
+
+    containerDescription.appendChild(reactImage);
+
+    containerDescription.appendChild(cssImage);
+
+    containerDescription.appendChild(reduxImage);
 
     containerDescription.appendChild(ccHeader);
 
