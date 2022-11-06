@@ -1,13 +1,8 @@
-//TODO 
-// 1. Update Lifedu site to have margin top where you meet Lif
-// 2. Update Homepage site to scroll when there is overflow 
-// 4. Update the skills to include bios idk
-
 const menu = document.getElementById("menu");
 const centercentre = document.getElementById("centercentre");
 const thelifedu = document.getElementById("thelifedu");
 const glitchBlog = document.getElementById("glitchBlog");
-const journal = document.getElementById("journal");
+const proshop = document.getElementById("proshop");
 
 const createSite = (siteID, siteSrc, siteTitle, container) => {
     //Create the iframe element with the site
@@ -211,7 +206,7 @@ glitchBlog.addEventListener("click", function () {
     document.body.appendChild(window);
 })
 
-journal.addEventListener("click", function () {
+proshop.addEventListener("click", function () {
     //Create container div to keep the iframe
     const window = document.createElement("div");
     window.id = "container-iframe"
@@ -219,24 +214,28 @@ journal.addEventListener("click", function () {
     const containerDescription = document.createElement("div");
     containerDescription.id = 'cc-info'
 
-    createSite('cc-iframe', 'http://inspirationalhomepage.website/', 'An Inspirational Homepage', containerDescription);
+    createSite('cc-iframe', 'https://mern-brad-project.herokuapp.com/', 'A MERN Stack Project', containerDescription);
 
-    createDescriptions("This is an inspirational homepage I created while learning Redux. This uses OpenWeather API, Inspirational Quotes API, and Image API.",
-        "The OpenweatherAPI lets you see the zipcode current weather. Image API to get images to use as backgrounds, click on the arrows to change the background. Inspirational Quotes at the bottom of the screen to motivate you to finish your tasks. Once you finish a task, you can mark it as done which will throw confetti!",
+    createDescriptions("This is an eCommerece MERN project that I learned from Brad Traversy. I learned about back-end, MongoDB through this course.",
+        "The most difficult part about this project was the product reviews. Imagine if I had more than 10 reviews, I don't want them all there so I had to do paginations for the reviews, which I accomplished with the stage mangement in Redux. Of course this product gets confusing since there are so many files, so I made sure to document my process. So if you would like to take a look and go through my readme, I would appreciate that!",
         containerDescription
     )
 
-    createButtons('http://inspirationalhomepage.website/', "View Site", 'https://github.com/HenryDelGlitch/weatherAppPortfolio', "View Code", containerDescription);
+    createButtons('https://mern-brad-project.herokuapp.com/', "View Site", 'https://github.com/HenryDelGlitch/MERN_React_Project', "View Code", containerDescription);
 
     createExitButton(containerDescription, window);
 
     createImage('reactImage', 'REACT', "./img/react.png", "React Icon", containerDescription);
 
-    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
+    createImage('mongoImage', 'MONGO', "./img/mongo.png", "MongoDB Icon", containerDescription);
 
     createImage('reduxImage', 'REDUX', "./img/redux.png", "Redux Icon", containerDescription);
 
-    createHeader('blogHeader', 'http://inspirationalhomepage.website/', "An Inspirational Homepage", containerDescription);
+    createImage('expressImage', 'EXPRESS', "./img/expressjs.png", "Express Icon", containerDescription);
+
+    createImage('nodeImage', 'NODE', "./img/nodejs.png", "Node Icon", containerDescription);
+
+    createHeader('blogHeader', 'https://mern-brad-project.herokuapp.com/', "Proshop - A MERN Project", containerDescription);
 
     window.appendChild(containerDescription);
 

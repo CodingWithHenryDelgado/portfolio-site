@@ -306,7 +306,10 @@ svg {
 #FileZilla,
 #PHP,
 #REACT,
-#REDUX {
+#REDUX,
+#MONGO,
+#EXPRESS,
+#NODE {
     display: none;
 }
 
@@ -557,7 +560,10 @@ svg {
     #FileZilla,
     #PHP,
     #REACT,
-    #REDUX {
+    #REDUX,
+    #MONGO,
+    #EXPRESS,
+    #NODE {
         display: block;
         max-height: 50px;
         max-width: 50px;
@@ -580,13 +586,23 @@ svg {
         top: 30%;
     }
 
+    #MONGO {
+        top: 20%;
+    }
+
     #CSS3 {
         top: 20%;
         right: 1%;
     }
 
-    #FileZilla {
+    #FileZilla,
+    #EXPRESS {
         top: 40%;
+    }
+
+    #NODE {
+        top: 45%;
+        width: 50px;
     }
 
     #closeButton {
@@ -753,6 +769,10 @@ svg {
         top: 32%;
     }
 
+    #MONGO {
+        top: 22%;
+    }
+
     #CSS3 {
         top: 22%;
         right: 1%;
@@ -762,8 +782,13 @@ svg {
         top: 32%;
     }
 
-    #FileZilla {
+    #FileZilla,
+    #EXPRESS {
         top: 42%;
+    }
+
+    #NODE {
+        top: 47%;
     }
 
     .projects,
