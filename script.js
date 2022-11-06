@@ -1,6 +1,6 @@
 //TODO 
-// 1. Update Lifedu to have margin top where you meet Lif
-// 2. Update Homepage to scroll when there is overflow 
+// 1. Update Lifedu site to have margin top where you meet Lif
+// 2. Update Homepage site to scroll when there is overflow 
 // 3. Update the menu button to look good on tablet and desktop
 // 4. Update the skills to include bios idk
 
@@ -10,135 +10,142 @@ const thelifedu = document.getElementById("thelifedu");
 const glitchBlog = document.getElementById("glitchBlog");
 const journal = document.getElementById("journal");
 
-centercentre.addEventListener("click", function () {
-    //Create container div to keep the iframe
-    const window = document.createElement("div");
-    window.id = "container-iframe"
-
+const createSite = (siteID, siteSrc, siteTitle, container) => {
     //Create the iframe element with the site
     const site = document.createElement("iframe");
-    site.id = 'cc-iframe';
-    site.src = 'https://www.uie.com/';
-    site.title = 'UIE website';
 
-    const containerDescription = document.createElement("div");
-    containerDescription.id = 'cc-info'
+    site.id = siteID;
 
+    site.src = siteSrc;
+
+    site.title = siteTitle;
+
+    container.appendChild(site);
+}
+
+const createDescriptions = (firstSentence, secondSentence, mainDiv) => {
     const description = document.createElement("p");
-    const text = document.createTextNode("I redesigned the main site of UIE with the help of the Lead of Marketing and Design, Summer, and my Manager, Marko. They both supplied me with the design template and helped me improve it when testing it's responsiveness.")
+    const text = document.createTextNode(firstSentence);
 
     const descriptionTwo = document.createElement("p");
-    const textTwo = document.createTextNode(" I would use our test page in WordPress, in order to make sure the HTML code works well with our WordPress theme and if it's responsive. We went through several revisions until it was decided to use this on our main page.");
+    const textTwo = document.createTextNode(secondSentence);
 
+    description.appendChild(text);
+    descriptionTwo.appendChild(textTwo);
+
+    mainDiv.appendChild(description);
+    mainDiv.appendChild(descriptionTwo);
+}
+
+const createImage = (imageVariable, imageId, imageSrc, imageAlt, mainDiv) => {
+    imageVariable = document.createElement("img");
+
+    imageVariable.id = imageId
+
+    imageVariable.src = imageSrc;
+
+    imageVariable.alt = imageAlt;
+
+    mainDiv.appendChild(imageVariable);
+}
+
+const createButtons = (siteButtonWebsite, siteButtonText, codeButtonWebsite, codeButtonText, mainDiv) => {
     const siteButton = document.createElement("a");
 
     siteButton.id = 'siteButton';
 
-    siteButton.href = 'https://www.uie.com/';
+    siteButton.href = siteButtonWebsite;
 
     siteButton.target = '_blank';
 
-    const siteButtonText = document.createTextNode("View Site");
+    const siteButtonWriting = document.createTextNode(siteButtonText);
 
-    siteButton.appendChild(siteButtonText);
+    siteButton.appendChild(siteButtonWriting);
 
     const siteCode = document.createElement("a");
 
     siteCode.id = 'siteCode';
 
-    const siteCodeText = document.createTextNode("No Public Code!");
+    if (codeButtonWebsite !== "#") {
+        siteCode.href = codeButtonWebsite;
+        siteCode.target = '_blank';
+    }
+
+    const siteCodeText = document.createTextNode(codeButtonText);
 
     siteCode.appendChild(siteCodeText);
 
-    description.appendChild(text);
+    mainDiv.appendChild(siteButton);
 
-    descriptionTwo.appendChild(textTwo);
+    mainDiv.appendChild(siteCode);
+}
 
-    const getOut = document.createElement("button");
-
-    getOut.id = 'closeButton';
-
-    const getOutText = document.createTextNode("X");
-
-    getOut.appendChild(getOutText);
-
-    const htmlImage = document.createElement("img");
-
-    htmlImage.id = "HTML5"
-
-    htmlImage.src = "./img/html5.png";
-
-    htmlImage.alt = "HTML5 Icon";
-
-    const cssImage = document.createElement("img");
-
-    cssImage.id = "CSS3"
-
-    cssImage.src = "./img/css3.png";
-
-    cssImage.alt = "CSS3 Icon";
-
-    const wordPressImage = document.createElement("img");
-
-    wordPressImage.id = "WP"
-
-    wordPressImage.src = "./img/wordpress.png";
-
-    wordPressImage.alt = "WordPress Icon";
-
-    const fileZillaImage = document.createElement("img");
-
-    fileZillaImage.id = "FileZilla"
-
-    fileZillaImage.src = "./img/filezilla.png";
-
-    fileZillaImage.alt = "FileZilla Icon";
-
+const createHeader = (ccHeaderID, ccHeaderHref, ccText, mainDiv) => {
     const ccHeader = document.createElement("h2");
 
-    ccHeader.id = 'ccHeader';
+    ccHeader.id = ccHeaderID;
 
     const ccHeaderLink = document.createElement("a");
 
-    ccHeaderLink.href = 'https://www.uie.com/';
+    ccHeaderLink.href = ccHeaderHref;
 
-    const ccHeaderText = document.createTextNode("UIE - Redesign Project");
+    const ccHeaderText = document.createTextNode(ccText);
 
     ccHeaderLink.appendChild(ccHeaderText);
 
     ccHeader.appendChild(ccHeaderLink);
 
-    containerDescription.appendChild(site);
+    mainDiv.appendChild(ccHeader);
+}
 
-    containerDescription.appendChild(description);
+const createExitButton = (mainDiv, windowDiv) => {
+    const exitButton = document.createElement("button");
 
-    containerDescription.appendChild(descriptionTwo);
+    exitButton.id = 'closeButton';
 
-    containerDescription.appendChild(siteCode);
+    const exitButtonText = document.createTextNode("X");
 
-    containerDescription.appendChild(siteButton);
+    exitButton.appendChild(exitButtonText);
 
-    containerDescription.appendChild(siteCode);
+    exitButton.onclick = function () {
+        document.body.removeChild(windowDiv);
+    }
 
-    containerDescription.appendChild(getOut);
+    mainDiv.appendChild(exitButton);
+}
 
-    containerDescription.appendChild(htmlImage);
+centercentre.addEventListener("click", function () {
+    //Create container div to keep the iframe
+    const window = document.createElement("div");
+    window.id = "container-iframe"
 
-    containerDescription.appendChild(cssImage);
+    const containerDescription = document.createElement("div");
+    containerDescription.id = 'cc-info';
 
-    containerDescription.appendChild(wordPressImage);
+    createSite('cc-iframe', 'https://www.uie.com/', 'UIE website', containerDescription);
 
-    containerDescription.appendChild(fileZillaImage);
+    createDescriptions("I redesigned the main site of UIE with the help of the Lead of Marketing and Design, Summer, and my Manager, Marko. They both supplied me with the design template and helped me improve it when testing it's responsiveness.",
+        "I would use our test page in WordPress, in order to make sure the HTML code works well with our WordPress theme and if it's responsive. We went through several revisions until it was decided to use this on our main page.",
+        containerDescription
+    )
 
-    containerDescription.appendChild(ccHeader);
+    createButtons('https://www.uie.com/', "View Site", "#", "No Public Code!", containerDescription);
+
+    createExitButton(containerDescription, window);
+
+    createImage('htmlImage', 'HTML5', "./img/html5.png", "HTML5 Icon", containerDescription);
+
+    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
+
+    createImage('wordPressImage', 'WP', "./img/wordpress.png", "WordPress Icon", containerDescription);
+
+    createImage('fileZillaImage', 'FileZilla', "./img/filezilla.png", "FileZilla Icon", containerDescription);
+
+    createHeader('ccHeader', 'https://www.uie.com/', "UIE - Redesign Project", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
-
-    getOut.onclick = function () {
-        document.body.removeChild(window);
-    }
 })
 
 thelifedu.addEventListener("click", function () {
@@ -146,124 +153,31 @@ thelifedu.addEventListener("click", function () {
     const window = document.createElement("div");
     window.id = "container-iframe"
 
-    //Create the iframe element with the site
-    const site = document.createElement("iframe");
-    site.id = 'cc-iframe';
-    site.src = 'https://henrydelglitch.github.io/the-lifedu/';
-    site.title = 'UIE website';
-
     const containerDescription = document.createElement("div");
     containerDescription.id = 'cc-info'
 
-    const description = document.createElement("p");
-    const text = document.createTextNode("During my first month, I was given illustrator and Figma files to build their site from scratch. I would show my progress to the Senior Developer, Abhinav Manohar and he would give me feedback.")
+    createSite('cc-iframe', 'https://henrydelglitch.github.io/the-lifedu/', 'The Lifedu', containerDescription);
 
-    const descriptionTwo = document.createElement("p");
-    const textTwo = document.createTextNode("Every week, the whole team would have a Zoom meeting (India and USA). I would show my progress on the site, then once we agree the page was complete, the Designer, Shradha of the team would give me more pages to create and work on.");
+    createDescriptions("During my first month, I was given illustrator and Figma files to build their site from scratch. I would show my progress to the Senior Developer, Abhinav Manohar and he would give me feedback.",
+        "Every week, the whole team would have a Zoom meeting (India and USA). I would show my progress on the site, then once we agree the page was complete, the Designer, Shradha of the team would give me more pages to create and work on.",
+        containerDescription
+    )
 
-    const siteButton = document.createElement("a");
+    createButtons('https://henrydelglitch.github.io/the-lifedu/', "View Site", "https://github.com/HenryDelGlitch/the-lifedu", "Github Code", containerDescription);
 
-    siteButton.id = 'siteButton';
+    createExitButton(containerDescription, window);
 
-    siteButton.href = 'https://henrydelglitch.github.io/the-lifedu/';
+    createImage('htmlImage', 'HTML5', "./img/html5.png", "HTML5 Icon", containerDescription);
 
-    siteButton.target = '_blank';
+    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
 
-    const siteButtonText = document.createTextNode("View Site");
+    createImage('jsImage', 'JS', "./img/js.png", "JS Icon", containerDescription);
 
-    siteButton.appendChild(siteButtonText);
-
-    const siteCode = document.createElement("a");
-
-    siteCode.id = 'siteCode';
-
-    siteCode.target = '_blank';
-
-    siteCode.href = 'https://github.com/HenryDelGlitch/the-lifedu';
-
-    const siteCodeText = document.createTextNode("Github Code");
-
-    siteCode.appendChild(siteCodeText);
-
-    description.appendChild(text);
-
-    descriptionTwo.appendChild(textTwo);
-
-    const getOut = document.createElement("button");
-
-    getOut.id = 'closeButton';
-
-    const getOutText = document.createTextNode("X");
-
-    getOut.appendChild(getOutText);
-
-    const htmlImage = document.createElement("img");
-
-    htmlImage.id = "HTML5"
-
-    htmlImage.src = "./img/html5.png";
-
-    htmlImage.alt = "HTML5 Icon";
-
-    const cssImage = document.createElement("img");
-
-    cssImage.id = "CSS3"
-
-    cssImage.src = "./img/css3.png";
-
-    cssImage.alt = "CSS3 Icon";
-
-    const jsImage = document.createElement("img");
-
-    jsImage.id = "JS"
-
-    jsImage.src = "./img/js.png";
-
-    jsImage.alt = "JS Icon";
-
-    const ccHeader = document.createElement("h2");
-
-    ccHeader.id = 'lifeduHeader';
-
-    const ccHeaderLink = document.createElement("a");
-
-    ccHeaderLink.href = 'https://github.com/HenryDelGlitch/the-lifedu';
-
-    const ccHeaderText = document.createTextNode("The Lifedu");
-
-    ccHeaderLink.appendChild(ccHeaderText);
-
-    ccHeader.appendChild(ccHeaderLink);
-
-    containerDescription.appendChild(site);
-
-    containerDescription.appendChild(description);
-
-    containerDescription.appendChild(descriptionTwo);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(siteButton);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(getOut);
-
-    containerDescription.appendChild(htmlImage);
-
-    containerDescription.appendChild(cssImage);
-
-    containerDescription.appendChild(jsImage);
-
-    containerDescription.appendChild(ccHeader);
+    createHeader('lifeduHeader', 'https://github.com/HenryDelGlitch/the-lifedu', "The Lifedu", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
-
-    getOut.onclick = function () {
-        document.body.removeChild(window);
-    }
 })
 
 glitchBlog.addEventListener("click", function () {
@@ -271,124 +185,31 @@ glitchBlog.addEventListener("click", function () {
     const window = document.createElement("div");
     window.id = "container-iframe"
 
-    //Create the iframe element with the site
-    const site = document.createElement("iframe");
-    site.id = 'cc-iframe';
-    site.src = 'https://glitchblog.site/';
-    site.title = 'GlitchBlog';
-
     const containerDescription = document.createElement("div");
     containerDescription.id = 'cc-info'
 
-    const description = document.createElement("p");
-    const text = document.createTextNode("This is a WordPress blog I created using the SkillCrush theme as a starter boilerplate which I would mold into my own theme.")
+    createSite('cc-iframe', 'https://glitchblog.site/', 'GlitchBlog', containerDescription);
 
-    const descriptionTwo = document.createElement("p");
-    const textTwo = document.createTextNode("Learning how to use Apache and XAMPP during this process was a headache but it was worth it. Now I have my own place to write my own thoughts and ideas!");
+    createDescriptions("This is a WordPress blog I created using the SkillCrush theme as a starter boilerplate which I would mold into my own theme.",
+        "Learning how to use Apache and XAMPP during this process was a headache but it was worth it. Now I have my own place to write my own thoughts and ideas!",
+        containerDescription
+    )
 
-    const siteButton = document.createElement("a");
+    createButtons('https://glitchblog.site/', "View Site", 'https://github.com/HenryDelGlitch/glitchblog-theme', "View Theme", containerDescription);
 
-    siteButton.id = 'siteButton';
+    createExitButton(containerDescription, window);
 
-    siteButton.href = 'https://glitchblog.site/';
+    createImage('phpImage', 'PHP', "./img/php.png", "PHP Icon", containerDescription);
 
-    siteButton.target = '_blank';
+    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
 
-    const siteButtonText = document.createTextNode("View Site");
+    createImage('wordPressImage', 'WP', "./img/wordpress.png", "WordPress Icon", containerDescription);
 
-    siteButton.appendChild(siteButtonText);
-
-    const siteCode = document.createElement("a");
-
-    siteCode.id = 'siteCode';
-
-    siteCode.target = '_blank';
-
-    siteCode.href = 'https://github.com/HenryDelGlitch/glitchblog-theme';
-
-    const siteCodeText = document.createTextNode("View Theme");
-
-    siteCode.appendChild(siteCodeText);
-
-    description.appendChild(text);
-
-    descriptionTwo.appendChild(textTwo);
-
-    const getOut = document.createElement("button");
-
-    getOut.id = 'closeButton';
-
-    const getOutText = document.createTextNode("X");
-
-    getOut.appendChild(getOutText);
-
-    const phpImage = document.createElement("img");
-
-    phpImage.id = "PHP"
-
-    phpImage.src = "./img/php.png";
-
-    phpImage.alt = "PHP Icon";
-
-    const cssImage = document.createElement("img");
-
-    cssImage.id = "CSS3"
-
-    cssImage.src = "./img/css3.png";
-
-    cssImage.alt = "CSS3 Icon";
-
-    const wordPressImage = document.createElement("img");
-
-    wordPressImage.id = "WP";
-
-    wordPressImage.src = "./img/wordpress.png";
-
-    wordPressImage.alt = "WordPress Icon";
-
-    const ccHeader = document.createElement("h2");
-
-    ccHeader.id = 'blogHeader';
-
-    const ccHeaderLink = document.createElement("a");
-
-    ccHeaderLink.href = 'https://glitchblog.site/';
-
-    const ccHeaderText = document.createTextNode("My WordPress Blog - GlitchBlog");
-
-    ccHeaderLink.appendChild(ccHeaderText);
-
-    ccHeader.appendChild(ccHeaderLink);
-
-    containerDescription.appendChild(site);
-
-    containerDescription.appendChild(description);
-
-    containerDescription.appendChild(descriptionTwo);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(siteButton);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(getOut);
-
-    containerDescription.appendChild(phpImage);
-
-    containerDescription.appendChild(cssImage);
-
-    containerDescription.appendChild(wordPressImage);
-
-    containerDescription.appendChild(ccHeader);
+    createHeader('blogHeader', 'https://glitchblog.site/', "My WordPress Blog - GlitchBlog", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
-
-    getOut.onclick = function () {
-        document.body.removeChild(window);
-    }
 })
 
 journal.addEventListener("click", function () {
@@ -396,124 +217,31 @@ journal.addEventListener("click", function () {
     const window = document.createElement("div");
     window.id = "container-iframe"
 
-    //Create the iframe element with the site
-    const site = document.createElement("iframe");
-    site.id = 'cc-iframe';
-    site.src = 'http://inspirationalhomepage.website/';
-    site.title = 'An Inspirational Homepage';
-
     const containerDescription = document.createElement("div");
     containerDescription.id = 'cc-info'
 
-    const description = document.createElement("p");
-    const text = document.createTextNode("This is an inspirational homepage I created while learning Redux. This uses OpenWeather API, Inspirational Quotes API, and Image API.")
+    createSite('cc-iframe', 'http://inspirationalhomepage.website/', 'An Inspirational Homepage', containerDescription);
 
-    const descriptionTwo = document.createElement("p");
-    const textTwo = document.createTextNode("The OpenweatherAPI lets you see the zipcode current weather. Image API to get images to use as backgrounds, click on the arrows to change the background. Inspirational Quotes at the bottom of the screen to motivate you to finish your tasks. Once you finish a task, you can mark it as done which will throw confetti!");
+    createDescriptions("This is an inspirational homepage I created while learning Redux. This uses OpenWeather API, Inspirational Quotes API, and Image API.",
+        "The OpenweatherAPI lets you see the zipcode current weather. Image API to get images to use as backgrounds, click on the arrows to change the background. Inspirational Quotes at the bottom of the screen to motivate you to finish your tasks. Once you finish a task, you can mark it as done which will throw confetti!",
+        containerDescription
+    )
 
-    const siteButton = document.createElement("a");
+    createButtons('http://inspirationalhomepage.website/', "View Site", 'https://github.com/HenryDelGlitch/weatherAppPortfolio', "View Code", containerDescription);
 
-    siteButton.id = 'siteButton';
+    createExitButton(containerDescription, window);
 
-    siteButton.href = 'http://inspirationalhomepage.website/';
+    createImage('reactImage', 'REACT', "./img/react.png", "React Icon", containerDescription);
 
-    siteButton.target = '_blank';
+    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
 
-    const siteButtonText = document.createTextNode("View Site");
+    createImage('reduxImage', 'REDUX', "./img/redux.png", "Redux Icon", containerDescription);
 
-    siteButton.appendChild(siteButtonText);
-
-    const siteCode = document.createElement("a");
-
-    siteCode.id = 'siteCode';
-
-    siteCode.target = '_blank';
-
-    siteCode.href = 'https://github.com/HenryDelGlitch/weatherAppPortfolio';
-
-    const siteCodeText = document.createTextNode("View Code");
-
-    siteCode.appendChild(siteCodeText);
-
-    description.appendChild(text);
-
-    descriptionTwo.appendChild(textTwo);
-
-    const getOut = document.createElement("button");
-
-    getOut.id = 'closeButton';
-
-    const getOutText = document.createTextNode("X");
-
-    getOut.appendChild(getOutText);
-
-    const reactImage = document.createElement("img");
-
-    reactImage.id = "REACT"
-
-    reactImage.src = "./img/react.png";
-
-    reactImage.alt = "React Icon";
-
-    const cssImage = document.createElement("img");
-
-    cssImage.id = "CSS3"
-
-    cssImage.src = "./img/css3.png";
-
-    cssImage.alt = "CSS3 Icon";
-
-    const reduxImage = document.createElement("img");
-
-    reduxImage.id = "REDUX";
-
-    reduxImage.src = "./img/redux.png";
-
-    reduxImage.alt = "Redux Icon";
-
-    const ccHeader = document.createElement("h2");
-
-    ccHeader.id = 'blogHeader';
-
-    const ccHeaderLink = document.createElement("a");
-
-    ccHeaderLink.href = 'http://inspirationalhomepage.website/';
-
-    const ccHeaderText = document.createTextNode("An Inspirational Homepage");
-
-    ccHeaderLink.appendChild(ccHeaderText);
-
-    ccHeader.appendChild(ccHeaderLink);
-
-    containerDescription.appendChild(site);
-
-    containerDescription.appendChild(description);
-
-    containerDescription.appendChild(descriptionTwo);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(siteButton);
-
-    containerDescription.appendChild(siteCode);
-
-    containerDescription.appendChild(getOut);
-
-    containerDescription.appendChild(reactImage);
-
-    containerDescription.appendChild(cssImage);
-
-    containerDescription.appendChild(reduxImage);
-
-    containerDescription.appendChild(ccHeader);
+    createHeader('blogHeader', 'http://inspirationalhomepage.website/', "An Inspirational Homepage", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
-
-    getOut.onclick = function () {
-        document.body.removeChild(window);
-    }
 })
 
 class Particle {
