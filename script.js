@@ -1,7 +1,6 @@
 //TODO 
 // 1. Update Lifedu site to have margin top where you meet Lif
 // 2. Update Homepage site to scroll when there is overflow 
-// 3. Update the menu button to look good on tablet and desktop
 // 4. Update the skills to include bios idk
 
 const menu = document.getElementById("menu");
