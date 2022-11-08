@@ -403,7 +403,13 @@ svg {
 }
 
 .projects h2 {
-    margin-bottom: 15%;
+    margin-bottom: 5%;
+}
+
+.projects p {
+    font-size: 0.8rem;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
 .project {
@@ -667,7 +673,11 @@ svg {
 
     .projects h2 {
         font-size: 4rem;
-        margin-bottom: 5%;
+    }
+
+    .projects p {
+        font-size: 2rem;
+        margin-bottom: 0;
     }
 
     .projects img {
@@ -814,6 +824,10 @@ svg {
 
     .projects img {
         margin: 2% 3%;
+    }
+
+    .projects h2 {
+        margin-bottom: 2%;
     }
 
     #centercentre {
