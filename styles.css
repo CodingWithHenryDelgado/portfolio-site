@@ -147,7 +147,7 @@ h4 {
     width: 100%;
     height: 100%;
     max-width: 100vw;
-    max-height: 100vh;
+    height: auto;
     overflow-x: hidden;
     z-index: -10;
 }
@@ -366,22 +366,37 @@ svg {
     width: 90%;
 }
 
+.about {
+    background-image: url('./img/selfie-201.png');
+    background-position: bottom;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    height: 75vh;
+}
+
 .about h1 {
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
     font-size: 1.9rem;
+    line-height: 3rem;
     text-align: left;
+    text-decoration: none;
+}
+
+.about span {
+    font-weight: bold;
 }
 
 .bio {
     font-family: 'Nunito', sans-serif;
-    line-height: 1.2rem;
+    font-size: 1rem;
     margin: 5% 0;
     text-align: left;
+    width: 43%;
 }
 
-.name,
-.bio {
-    display: inline-block;
+.bio p {
+    padding-bottom: 5%;
 }
 
 #selfie {
@@ -420,7 +435,7 @@ svg {
 .projects img {
     cursor: pointer;
     height: auto;
-    max-height: 100px;
+    max-height: auto;
     margin: 10% 0;
     width: 100px;
 }
@@ -628,14 +643,15 @@ svg {
     }
 
     .about {
-        display: inline-grid;
-        grid-template-columns: 65% 35%;
+        background-size: 75%;
+        background-position: right -50% bottom;
         max-width: 750px;
         padding: 5%;
     }
 
     .about h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+        line-height: 5rem;
     }
 
     .name {
@@ -682,7 +698,7 @@ svg {
 
     .projects img {
         margin: 7%;
-        max-height: 125px;
+        height: auto;
         width: 125px;
     }
 
@@ -740,16 +756,16 @@ svg {
     }
 
     .about {
+        background-size: 60%;
+        background-position: right bottom;
         height: auto;
-        grid-template-columns: 50% 50%;
-        max-height: 75vh;
-        max-width: 950px;
+        max-width: 1000px;
         padding: 5%;
     }
 
     #container-iframe {
         margin: 2% 0;
-        max-height: 1000px;
+        height: auto;
         max-width: 1000px;
         padding: 0 4%;
     }
@@ -808,12 +824,12 @@ svg {
     #skills,
     #contact {
         height: auto;
-        max-height: 75vh;
+        max-height: auto;
         max-width: 900px;
     }
 
     .bio {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     #selfie {
