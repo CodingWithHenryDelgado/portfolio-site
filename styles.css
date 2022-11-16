@@ -350,7 +350,6 @@ svg {
 .about,
 .projects,
 #skills,
-#contact,
 #container-iframe {
     background-color: #FFF;
     border-radius: 10px;
@@ -368,10 +367,11 @@ svg {
 
 .about {
     background-image: url('./img/selfie-201.png');
-    background-position: bottom;
+    background-position: right bottom;
     background-size: 75%;
     background-repeat: no-repeat;
     height: 75vh;
+    padding: 5% 10%;
 }
 
 .about h1 {
@@ -392,7 +392,7 @@ svg {
     font-size: 1rem;
     margin: 5% 0;
     text-align: left;
-    width: 43%;
+    width: 100%;
 }
 
 .bio p {
@@ -437,6 +437,7 @@ svg {
     height: auto;
     max-height: auto;
     margin: 10% 0;
+    transition: 0.3s;
     width: 100px;
 }
 
@@ -474,30 +475,7 @@ svg {
     font-size: 64px;
 }
 
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 50vh;
-}
-
-#contact h4 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-#contact a {
-    text-decoration: none;
-}
-
-#contact img {
-    height: 50px;
-    width: 50px;
-}
-
 .links {
-    display: inline-grid;
     margin: 10% 0;
 }
 
@@ -508,12 +486,18 @@ svg {
 
 .social-media {
     font-size: 48px;
-    width: 100%;
+    width: 20%;
 }
 
 .social-media a {
     color: #24212A;
     margin: 10% 0;
+    text-decoration: none;
+}
+
+.social-media i {
+    margin: 30% 0;
+    transition: 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -662,7 +646,7 @@ svg {
     .bio {
         grid-column-start: 1;
         line-height: 2rem;
-        margin: 5% 0;
+        width: 43%;
     }
 
     .selfie {
@@ -677,8 +661,7 @@ svg {
     }
 
     .projects,
-    #skills,
-    #contact {
+    #skills {
         padding: 5% 0;
         max-width: 750px;
     }
@@ -724,14 +707,6 @@ svg {
         margin-bottom: 10%;
     }
 
-    #contact {
-        font-size: 1.5rem;
-    }
-
-    #contact h4 {
-        font-size: 3rem;
-    }
-
     .links {
         margin: 5% 0;
     }
@@ -740,9 +715,8 @@ svg {
         width: 100%;
     }
 
-    #contact img {
-        height: 75px;
-        width: 75px;
+    .social-media {
+        width: 100%;
     }
 
     .social-media i {
@@ -756,11 +730,11 @@ svg {
     }
 
     .about {
-        background-size: 60%;
+        background-size: 40%;
         background-position: right bottom;
         height: auto;
         max-width: 1000px;
-        padding: 5%;
+        padding: 3%;
     }
 
     #container-iframe {
@@ -821,8 +795,7 @@ svg {
     }
 
     .projects,
-    #skills,
-    #contact {
+    #skills {
         height: auto;
         max-height: auto;
         max-width: 900px;
@@ -830,6 +803,7 @@ svg {
 
     .bio {
         font-size: 1.35rem;
+        margin: 0;
     }
 
     #selfie {
@@ -850,12 +824,12 @@ svg {
         margin: 0% 2% 6% 2%;
     }
 
-    #contact h4 {
-        font-size: 4rem;
+    .social-media {
+        text-align: left;
     }
 
-    .social-media {
-        font-size: 64px;
+    .social-media i {
+        margin: 0 1%;
     }
 
     .links {
