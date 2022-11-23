@@ -106,13 +106,7 @@ h4 {
 
 .menu.open .button:nth-of-type(2) {
     bottom: -90px;
-    right: -60px;
-    transition-delay: 0.05s;
-}
-
-.menu.open .button:nth-of-type(3) {
-    bottom: -90px;
-    right: 50px;
+    right: 0px;
     transition-delay: 0.05s;
 }
 
@@ -450,13 +444,15 @@ svg {
 }
 
 .project-images {
+    border: 1px solid #BDBCCB;
+    border-radius: 5%;
     cursor: pointer;
     height: 100px;
     margin: 5% 0;
     transition: 0.3s;
     width: 100px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 80%;
     background-position: center;
 }
 
@@ -473,9 +469,6 @@ svg {
 }
 
 #zendesk {
-    background-size: 80%;
-    border: 1px solid #BDBCCB;
-    border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -576,14 +569,9 @@ svg {
         right: -200px;
     }
 
-    .menu.open .button:nth-of-type(3) {
-        bottom: 0px;
-        right: -300px;
-    }
-
     .menu.open .button:last-of-type {
         bottom: 0px;
-        right: -400px;
+        right: -300px;
     }
 
     #container-iframe {
@@ -614,6 +602,12 @@ svg {
     #cc-info p {
         line-height: 1.75rem;
         padding: 2% 0;
+    }
+
+    #cc-desc {
+        height: auto;
+        max-height: 35%;
+        overflow: scroll;
     }
 
     #cc-iframe {

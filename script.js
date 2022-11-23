@@ -19,6 +19,9 @@ const createSite = (siteID, siteSrc, siteTitle, container) => {
 }
 
 const createDescriptions = (firstSentence, secondSentence, mainDiv) => {
+    const descriptionDiv = document.createElement("div");
+    descriptionDiv.id = "cc-desc"
+
     const description = document.createElement("p");
     const text = document.createTextNode(firstSentence);
 
@@ -28,8 +31,10 @@ const createDescriptions = (firstSentence, secondSentence, mainDiv) => {
     description.appendChild(text);
     descriptionTwo.appendChild(textTwo);
 
-    mainDiv.appendChild(description);
-    mainDiv.appendChild(descriptionTwo);
+    descriptionDiv.appendChild(description);
+    descriptionDiv.appendChild(descriptionTwo);
+
+    mainDiv.appendChild(descriptionDiv);
 }
 
 const createImage = (imageVariable, imageId, imageSrc, imageAlt, mainDiv) => {
