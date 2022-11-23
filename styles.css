@@ -185,6 +185,10 @@ svg {
     z-index: 0;
 }
 
+#container {
+    position: relative;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -235,6 +239,16 @@ svg {
     right: 0;
     height: 30px;
     padding: 0 10px;
+}
+
+#closeDiv {
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    z-index: 9;
 }
 
 #closeButton,
@@ -428,20 +442,40 @@ svg {
 }
 
 .project {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.projects img {
+.project-images {
     cursor: pointer;
-    height: auto;
-    max-height: auto;
-    margin: 10% 0;
+    height: 100px;
+    margin: 5% 0;
     transition: 0.3s;
     width: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
-.projects img:hover,
+#centercentre {
+    background-image: url('./img/centercentre.png');
+}
+
+#thelifedu {
+    background-image: url('./img/t-icon.png');
+}
+
+#zendesk {
+    background-image: url('./img/zendesk.png');
+}
+
+#proshop {
+    background-image: url('./img/journal-logo.png');
+}
+
+.project-images:hover,
 .social-media i:hover {
     transform: scale(1.8);
     transition: 0.5s;
@@ -667,6 +701,8 @@ svg {
     }
 
     .project {
+        justify-content: space-evenly;
+        flex-direction: row;
         width: 100%;
     }
 
@@ -677,16 +713,6 @@ svg {
     .projects p {
         font-size: 2rem;
         margin-bottom: 0;
-    }
-
-    .projects img {
-        margin: 7%;
-        height: auto;
-        width: 125px;
-    }
-
-    #centercentre {
-        margin: 0% 7% 11% 7%;
     }
 
     #skills h3 {
@@ -739,7 +765,6 @@ svg {
 
     #container-iframe {
         margin: 2% 0;
-        height: auto;
         max-width: 1000px;
         padding: 0 4%;
     }
@@ -794,6 +819,15 @@ svg {
         top: 47%;
     }
 
+    .project {
+        flex-wrap: wrap;
+    }
+
+    .project-images {
+        width: 150px;
+        height: 150px;
+    }
+
     .projects,
     #skills {
         height: auto;
@@ -818,10 +852,6 @@ svg {
 
     .projects h2 {
         margin-bottom: 2%;
-    }
-
-    #centercentre {
-        margin: 0% 2% 6% 2%;
     }
 
     .social-media {

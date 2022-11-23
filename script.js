@@ -1,8 +1,9 @@
 const menu = document.getElementById("menu");
 const centercentre = document.getElementById("centercentre");
 const thelifedu = document.getElementById("thelifedu");
-const glitchBlog = document.getElementById("glitchBlog");
+const zendesk = document.getElementById("zendesk");
 const proshop = document.getElementById("proshop");
+const container = document.getElementById("container");
 
 const createSite = (siteID, siteSrc, siteTitle, container) => {
     //Create the iframe element with the site
@@ -82,6 +83,12 @@ const createHeader = (ccHeaderID, ccHeaderHref, ccText, mainDiv) => {
     const ccHeaderLink = document.createElement("a");
 
     ccHeaderLink.href = ccHeaderHref;
+
+    if (ccHeaderHref !== "#") {
+        ccHeaderLink.target = '_blank';
+    } else {
+        ccHeaderLink.target = '';
+    }
 
     const ccHeaderText = document.createTextNode(ccText);
 
@@ -167,14 +174,14 @@ thelifedu.addEventListener("click", function () {
 
     createImage('jsImage', 'JS', "./img/js.png", "JS Icon", containerDescription);
 
-    createHeader('lifeduHeader', 'https://github.com/HenryDelGlitch/the-lifedu', "The Lifedu", containerDescription);
+    createHeader('lifeduHeader', 'https://henrydelglitch.github.io/the-lifedu/', "The Lifedu", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
 })
 
-glitchBlog.addEventListener("click", function () {
+zendesk.addEventListener("click", function () {
     //Create container div to keep the iframe
     const window = document.createElement("div");
     window.id = "container-iframe"
@@ -182,65 +189,57 @@ glitchBlog.addEventListener("click", function () {
     const containerDescription = document.createElement("div");
     containerDescription.id = 'cc-info'
 
-    createSite('cc-iframe', 'https://glitchblog.site/', 'GlitchBlog', containerDescription);
+    createSite('cc-iframe', 'https://player.vimeo.com/video/774098675?h=376361d729&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479', 'Zendesk', containerDescription);
 
-    createDescriptions("This is a WordPress blog I created using the SkillCrush theme as a starter boilerplate which I would mold into my own theme.",
-        "Learning how to use Apache and XAMPP during this process was a headache but it was worth it. Now I have my own place to write my own thoughts and ideas!",
+    createDescriptions("This project is how I improved the customer service experience for Center Centre by implementing Zendesk into our routine. This project took two months to complete, I'll try to tell you all about it in one paragraph, but it's best to watch the video.",
+        "In the beginning, I researched multiple Customer Service software and learned all the positives and negatives of each software. By the end of the journey, I chose Zendesk, which improved our routine by keeping all feedback in one spot and implemented triggers to keep us alert. I was lucky to have the opportunity to teach the company how to use it and to create documentation and videos for those future fellows.",
         containerDescription
     )
 
-    createButtons('https://glitchblog.site/', "View Site", 'https://github.com/HenryDelGlitch/glitchblog-theme', "View Theme", containerDescription);
-
     createExitButton(containerDescription, window);
 
-    createImage('phpImage', 'PHP', "./img/php.png", "PHP Icon", containerDescription);
-
-    createImage('cssImage', 'CSS3', "./img/css3.png", "CSS3 Icon", containerDescription);
-
-    createImage('wordPressImage', 'WP', "./img/wordpress.png", "WordPress Icon", containerDescription);
-
-    createHeader('blogHeader', 'https://glitchblog.site/', "My WordPress Blog - GlitchBlog", containerDescription);
+    createHeader('blogHeader', '#', "Zendesk Project", containerDescription);
 
     window.appendChild(containerDescription);
 
     document.body.appendChild(window);
 })
 
-proshop.addEventListener("click", function () {
-    //Create container div to keep the iframe
-    const window = document.createElement("div");
-    window.id = "container-iframe"
+// proshop.addEventListener("click", function () {
+//     //Create container div to keep the iframe
+//     const window = document.createElement("div");
+//     window.id = "container-iframe"
 
-    const containerDescription = document.createElement("div");
-    containerDescription.id = 'cc-info'
+//     const containerDescription = document.createElement("div");
+//     containerDescription.id = 'cc-info'
 
-    createSite('cc-iframe', 'https://mern-brad-project.herokuapp.com/', 'A MERN Stack Project', containerDescription);
+//     createSite('cc-iframe', 'https://mern-brad-project.herokuapp.com/', 'A MERN Stack Project', containerDescription);
 
-    createDescriptions("This is an eCommerece MERN project that I learned from Brad Traversy. I learned about back-end, MongoDB through this course.",
-        "The most difficult part about this project was the product reviews. Imagine if I had more than 10 reviews, I don't want them all there so I had to do paginations for the reviews, which I accomplished with the stage mangement in Redux. Of course this product gets confusing since there are so many files, so I made sure to document my process. So if you would like to take a look and go through my readme, I would appreciate that!",
-        containerDescription
-    )
+//     createDescriptions("This is an eCommerece MERN project that I learned from Brad Traversy. I learned about back-end, MongoDB through this course.",
+//         "The most difficult part about this project was the product reviews. Imagine if I had more than 10 reviews, I don't want them all there so I had to do paginations for the reviews, which I accomplished with the stage mangement in Redux.",
+//         containerDescription
+//     )
 
-    createButtons('https://mern-brad-project.herokuapp.com/', "View Site", 'https://github.com/HenryDelGlitch/MERN_React_Project', "View Code", containerDescription);
+//     createButtons('https://mern-brad-project.herokuapp.com/', "View Site", 'https://github.com/HenryDelGlitch/MERN_React_Project', "View Code", containerDescription);
 
-    createExitButton(containerDescription, window);
+//     createExitButton(containerDescription, window);
 
-    createImage('reactImage', 'REACT', "./img/react.png", "React Icon", containerDescription);
+//     createImage('reactImage', 'REACT', "./img/react.png", "React Icon", containerDescription);
 
-    createImage('mongoImage', 'MONGO', "./img/mongo.png", "MongoDB Icon", containerDescription);
+//     createImage('mongoImage', 'MONGO', "./img/mongo.png", "MongoDB Icon", containerDescription);
 
-    createImage('reduxImage', 'REDUX', "./img/redux.png", "Redux Icon", containerDescription);
+//     createImage('reduxImage', 'REDUX', "./img/redux.png", "Redux Icon", containerDescription);
 
-    createImage('expressImage', 'EXPRESS', "./img/expressjs.png", "Express Icon", containerDescription);
+//     createImage('expressImage', 'EXPRESS', "./img/expressjs.png", "Express Icon", containerDescription);
 
-    createImage('nodeImage', 'NODE', "./img/nodejs.png", "Node Icon", containerDescription);
+//     createImage('nodeImage', 'NODE', "./img/nodejs.png", "Node Icon", containerDescription);
 
-    createHeader('blogHeader', 'https://mern-brad-project.herokuapp.com/', "Proshop - A MERN Project", containerDescription);
+//     createHeader('blogHeader', 'https://mern-brad-project.herokuapp.com/', "Proshop - A MERN Project", containerDescription);
 
-    window.appendChild(containerDescription);
+//     window.appendChild(containerDescription);
 
-    document.body.appendChild(window);
-})
+//     document.body.appendChild(window);
+// })
 
 class Particle {
 
@@ -334,4 +333,3 @@ function update() {
     requestAnimationFrame(update.bind(this))
 }
 update()
-
