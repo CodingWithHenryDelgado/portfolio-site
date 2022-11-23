@@ -212,8 +212,9 @@ svg {
 
 #container-iframe {
     width: 90vw !important;
-    height: auto;
+    height: 90vh;
     position: absolute;
+    overflow: scroll;
     z-index: 999999999999;
 }
 
@@ -471,13 +472,38 @@ svg {
     background-image: url('./img/zendesk.png');
 }
 
+#zendesk {
+    background-size: 80%;
+    border: 1px solid #BDBCCB;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#zendesk .fas {
+    font-size: 4rem;
+    color: rgba(36, 33, 42, 0.95);
+}
+
+#zendesk:hover {
+    border: 1px solid #24212A;
+    box-shadow: 10px 10px 20px rgb(36 50 90 / 60%),
+        -10px -10px 20px rgb(36 50 90 / 30%);
+}
+
+#zendesk:hover .fas {
+    color: #F12139;
+}
+
 #proshop {
     background-image: url('./img/journal-logo.png');
 }
 
 .project-images:hover,
 .social-media i:hover {
-    transform: scale(1.8);
+    transform: scale(1.5);
     transition: 0.5s;
 }
 
@@ -563,6 +589,7 @@ svg {
     #container-iframe {
         height: 95vh;
         padding: 1% 4%;
+        overflow: hidden;
     }
 
     #lifeduHeader {
