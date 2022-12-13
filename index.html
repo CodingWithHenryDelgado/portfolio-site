@@ -37,9 +37,10 @@
     <div class="container" id="container">
         <div id="menu" class="menu" onclick="this.classList.toggle('open')">
             <div class="button"><a href="#home"><i class="fa-solid fa-house"></i></a></div>
-            <div class="button"><a href="#skills"><i class="fa-sharp fa-solid fa-list"></i></div>
             <div class="button"><a href="#projects"><i class="fa-solid fa-code"></i></a></div>
+            <div class="button"><a href="#skills"><i class="fa-sharp fa-solid fa-list"></i></a></div>
         </div>
+
         <div class="child" id="home">
             <div class="about">
                 <div class="name">
@@ -53,7 +54,7 @@
                         the Play Store, I looked into Front End Development, and now here we are! </p>
                     <p> If I'm
                         not coding
-                        websites or apps, I usually play video games or 3D printing.</p>
+                        websites or apps, I usually play video games or indulge in 3D printing.</p>
                 </div>
                 <div class="info" id="info">
                     <div class="social-media">
@@ -75,17 +76,112 @@
 
         <div class="child" id="projects">
             <div class="projects">
-                <div>
-                    <h2>Projects</h2>
-                    <p>Click on the icons to learn more!</p>
-                </div>
+                <h2>Featured Projects</h2>
                 <div class="project">
-                    <div id="centercentre" class="project-images"></div>
-                    <div id="thelifedu" class="project-images"></div>
-                    <div id="zendesk" class="project-images">
-                        <i class="fas fa-play"></i>
+                    <a href="#zendesk">
+                        <div id="zendesk-wallpaper" class="project-images">
+                        </div>
+                    </a>
+                    <a href="#centercentre">
+                        <div id="centercentre-wallpaper" class="project-images"></div>
+                    </a>
+                    <a href="#thelifedu">
+                        <div id="thelifedu-wallpaper" class="project-images"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="child" id="zendesk">
+            <div class="projects-card">
+                <div class="projects-iframes"><iframe
+                        src="https://player.vimeo.com/video/776831301?h=75b8c1f4bc&badge=0&autopause=0&player_id=0&app_id=58479/embed"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"
+                        style="width:100%;height:100%;"></iframe></div>
+                <div class="projects-description">
+                    <h3>Zendesk Implementation</h3>
+                    <p>
+                        This project is how I improved the customer service experience for Center Centre by implementing
+                        Zendesk into their routine.<br /><br />
+                        In the beginning, I researched multiple Customer Service software and I chose Zendesk, which
+                        improved our routine
+                        by keeping all feedback in one spot and implemented triggers to keep us alert. I was lucky to
+                        have
+                        the opportunity to teach the company how to use it and to create documentation and videos for
+                        those
+                        future fellows.
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a href="" id="siteButton">
+                        Visit Site
+                    </a>
+                    <a href="" id="siteCode">
+                        Visit Github
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="child" id="centercentre">
+            <div class="projects">
+                <div class="projects-iframes"><iframe
+                        src="https://player.vimeo.com/video/776831301?h=75b8c1f4bc&badge=0&autopause=0&player_id=0&app_id=58479/embed"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"
+                        style="width:100%;height:100%;"></iframe></div>
+                <h3>Center Centre Intensive Page</h3>
+                <p>
+                    I worked on the landing page for the Intensive, which Center Centre will have on February 6th. I
+                    created
+                    the landing page and middle pages from content given to me by Jared Spool and Dr. Leslie
+                    Jensen-Inman.
+
+                    I connected the middle pages to the checkout pages, which my co-fellow Amy Spencer created!
+
+                    <br /> <br />
+                    I used Zapier so that when users purchase a package, it will send them a dynamic receipt and update
+                    the
+                    number of seats remaining on the landing page. Marko, Amy, Shayne, and I tested the workflow and
+                    user
+                    experience before launching it to the public.
+                </p>
+                <div class="buttons">
+                    <a href="" id="siteButton">
+                        Visit Site
+                    </a>
+                    <a href="" id="siteCode">
+                        Visit Github
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="child" id="thelifedu">
+            <div class="projects">
+                <div class="projects-iframes"><iframe
+                        src="https://player.vimeo.com/video/776831301?h=75b8c1f4bc&badge=0&autopause=0&player_id=0&app_id=58479/embed"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0"
+                        style="width:100%;height:100%;"></iframe></div>
+                <div class="projects-description">
+                    <h3>The Lifedu</h3>
+                    <p>
+                        I was tasked with building The Lifedu landing page from Figma and PSD files.
+                        Every week I would meet with the team (Half in India and Half in the US) and change the site to
+                        their feedback. Shradha (UX Designer) would give me more pages to work on. <br /> <br />
+
+                        I worked on creating the Login page, the About Us page, the Journal pages, and the various
+                        emotions
+                        page for kids to write down how they feel. Yoshitha would present these pages to stakeholders so
+                        getting these pages done on time was very vital.
+                    </p>
+                    <div class="buttons">
+                        <a href="" id="siteButton">
+                            Visit Site
+                        </a>
+                        <a href="" id="siteCode">
+                            Visit Github
+                        </a>
                     </div>
-                    <!-- <div id="proshop" class="project-images"></div> -->
                 </div>
             </div>
         </div>

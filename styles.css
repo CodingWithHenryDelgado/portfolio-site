@@ -47,7 +47,6 @@ h3,
 h4 {
     color: #24212A;
     font-family: 'Cabin', cursive;
-    text-decoration: underline;
 }
 
 .menu {
@@ -102,12 +101,6 @@ h4 {
 .menu.open .button:first-of-type {
     bottom: 0px;
     right: 100px;
-}
-
-.menu.open .button:nth-of-type(2) {
-    bottom: -90px;
-    right: 0px;
-    transition-delay: 0.05s;
 }
 
 .menu.open .button:last-of-type {
@@ -204,54 +197,13 @@ svg {
     /* Safari and Chrome */
 }
 
-#container-iframe {
-    width: 90vw !important;
-    height: 90vh;
-    position: absolute;
-    overflow: scroll;
-    z-index: 999999999999;
-}
-
-#cc-iframe {
-    display: none;
-}
-
-#cc-info {
-    position: relative;
-    padding-top: 35%;
-}
-
-#cc-info p {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    text-align: left;
-    padding-bottom: 30px;
-}
-
-#closeButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 30px;
-    padding: 0 10px;
-}
-
-#closeDiv {
-    background-color: rgba(0, 0, 0, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    z-index: 9;
-}
-
 #closeButton,
 #siteButton,
 #siteCode {
     align-items: center;
     background-color: #fff;
     border: 1px solid #000;
+    border-radius: 20px;
     box-sizing: border-box;
     color: #000;
     cursor: pointer;
@@ -270,6 +222,7 @@ svg {
     text-decoration: none;
     transition: all .3s;
     user-select: none;
+    letter-spacing: 0.5px;
     -webkit-user-select: none;
     touch-action: manipulation;
     width: auto;
@@ -299,48 +252,6 @@ svg {
     fill: #06f;
 }
 
-#ccHeader {
-    font-weight: bold;
-    font-size: 1.5rem;
-    position: absolute;
-    text-align: left;
-    text-decoration: none;
-    top: 1%;
-    width: 75%;
-}
-
-#HTML5,
-#CSS3,
-#JS,
-#WP,
-#FileZilla,
-#PHP,
-#REACT,
-#REDUX,
-#MONGO,
-#EXPRESS,
-#NODE {
-    display: none;
-}
-
-#lifeduHeader {
-    font-weight: bold;
-    font-size: 2rem;
-    position: absolute;
-    text-decoration: none;
-    top: 3%;
-}
-
-#blogHeader {
-    font-weight: bold;
-    font-size: 1.2rem;
-    position: absolute;
-    text-align: left;
-    text-decoration: none;
-    top: 3%;
-    width: 75%;
-}
-
 .child {
     display: flex;
     justify-content: center;
@@ -359,7 +270,7 @@ svg {
 .about,
 .projects,
 #skills,
-#container-iframe {
+.projects-card {
     background-color: #FFF;
     border-radius: 10px;
     /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
@@ -421,19 +332,25 @@ svg {
     width: 200px;
 }
 
-.projects {
+.projects,
+.projects-card {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.projects h2 {
+.projects h3,
+.projects-card h3 {
+    font-size: 1.1rem;
     margin-bottom: 5%;
+    text-align: left;
 }
 
-.projects p {
+.projects p,
+.projects-card p {
     font-size: 0.8rem;
+    font-weight: 400;
     margin-bottom: 5%;
-    text-align: center;
+    text-align: left;
 }
 
 .project {
@@ -443,29 +360,32 @@ svg {
     flex-direction: column;
 }
 
+.project a {
+    margin: 2% 5%;
+}
+
 .project-images {
     border: 1px solid #BDBCCB;
     border-radius: 5%;
     cursor: pointer;
     height: 100px;
-    margin: 5% 0;
     transition: 0.3s;
-    width: 100px;
+    width: 150px;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: cover;
     background-position: center;
 }
 
-#centercentre {
-    background-image: url('./img/centercentre.png');
+#zendesk-wallpaper {
+    background-image: url('./img/zendesk-wallpaper.png');
 }
 
-#thelifedu {
-    background-image: url('./img/t-icon.png');
+#thelifedu-wallpaper {
+    background-image: url('./img/henry-life-edu.png');
 }
 
-#zendesk {
-    background-image: url('./img/zendesk.png');
+#centercentre-wallpaper {
+    background-image: url('./img/centercentre-wallpaper.png');
 }
 
 #zendesk {
@@ -475,32 +395,14 @@ svg {
     cursor: pointer;
 }
 
-#zendesk .fas {
-    font-size: 4rem;
-    color: rgba(36, 33, 42, 0.95);
-}
-
-#zendesk:hover {
-    border: 1px solid #24212A;
-    box-shadow: 10px 10px 20px rgb(36 50 90 / 60%),
-        -10px -10px 20px rgb(36 50 90 / 30%);
-}
-
-#zendesk:hover .fas {
-    color: #F12139;
-}
-
-#proshop {
-    background-image: url('./img/journal-logo.png');
-}
-
 .project-images:hover,
 .social-media i:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: 0.5s;
 }
 
-.projects i {
+.projects i,
+.projects-card i {
     color: var(--react-blue);
     font-size: 100px;
 }
@@ -522,7 +424,6 @@ svg {
 .one-skill {
     margin: 10%;
 }
-
 
 .one-skill i {
     font-size: 64px;
@@ -574,105 +475,6 @@ svg {
         right: -300px;
     }
 
-    #container-iframe {
-        height: 95vh;
-        padding: 1% 4%;
-        overflow: hidden;
-    }
-
-    #lifeduHeader {
-        font-size: 3rem;
-    }
-
-    #blogHeader {
-        font-size: 2rem;
-    }
-
-    #ccHeader a {
-        font-size: 3rem;
-        text-decoration: none;
-        top: 2%;
-    }
-
-    #cc-info {
-        height: 100%;
-        padding-top: 10%;
-    }
-
-    #cc-info p {
-        line-height: 1.75rem;
-        padding: 2% 0;
-    }
-
-    #cc-desc {
-        height: auto;
-        max-height: 35%;
-        overflow: scroll;
-    }
-
-    #cc-iframe {
-        display: block;
-        height: 55%;
-        width: 90%;
-    }
-
-    #HTML5,
-    #WP,
-    #CSS3,
-    #JS,
-    #FileZilla,
-    #PHP,
-    #REACT,
-    #REDUX,
-    #MONGO,
-    #EXPRESS,
-    #NODE {
-        display: block;
-        max-height: 50px;
-        max-width: 50px;
-        position: absolute;
-        right: 0;
-    }
-
-    #HTML5,
-    #REACT {
-        top: 10%;
-    }
-
-    #PHP {
-        top: 13%;
-    }
-
-    #WP,
-    #JS,
-    #REDUX {
-        top: 30%;
-    }
-
-    #MONGO {
-        top: 20%;
-    }
-
-    #CSS3 {
-        top: 20%;
-        right: 1%;
-    }
-
-    #FileZilla,
-    #EXPRESS {
-        top: 40%;
-    }
-
-    #NODE {
-        top: 45%;
-        width: 50px;
-    }
-
-    #closeButton {
-        font-size: 1.5rem;
-        min-width: 60px;
-    }
-
     #siteButton,
     #siteCode {
         display: inline-flex;
@@ -716,29 +518,43 @@ svg {
     }
 
     .projects,
-    #skills {
-        padding: 5% 0;
+    #skills,
+    .projects-card {
+        padding: 5%;
         max-width: 750px;
     }
 
     .project {
-        justify-content: space-evenly;
         flex-direction: row;
-        width: 100%;
+        flex-wrap: wrap;
     }
 
-    .projects h2 {
-        font-size: 4rem;
+    .project-images {
+        height: 200px;
+        width: 275px;
     }
 
-    .projects p {
+    .projects h3,
+    .projects-card h3 {
         font-size: 2rem;
+        margin: 2% 0;
+    }
+
+    .projects p,
+    .projects-card p {
+        font-size: 1.5rem;
         margin-bottom: 0;
     }
 
-    #skills h3 {
-        font-size: 4rem;
-        margin-bottom: 0;
+    .projects-iframes iframe {
+        height: 300px !important;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5% 0 2% 0;
     }
 
     .all-skills {
@@ -784,76 +600,24 @@ svg {
         padding: 3%;
     }
 
-    #container-iframe {
-        margin: 2% 0;
-        max-width: 1000px;
-        padding: 0 4%;
-    }
-
-    #ccHeader {
-        top: 4%;
-    }
-
-    #closeButton {
-        top: 2%;
-    }
-
-    #cc-info p {
-        font-size: 1.4rem;
-    }
-
-    #HTML5 {
-        top: 12%;
-    }
-
-    #REACT {
-        top: 13%;
-    }
-
-    #PHP {
-        top: 15%;
-    }
-
-    #WP {
-        top: 32%;
-    }
-
-    #MONGO {
-        top: 22%;
-    }
-
-    #CSS3 {
-        top: 22%;
-        right: 1%;
-    }
-
-    #JS {
-        top: 32%;
-    }
-
-    #FileZilla,
-    #EXPRESS {
-        top: 42%;
-    }
-
-    #NODE {
-        top: 47%;
-    }
-
     .project {
-        flex-wrap: wrap;
-    }
-
-    .project-images {
-        width: 150px;
-        height: 150px;
+        justify-content: space-between;
     }
 
     .projects,
-    #skills {
+    #skills,
+    .projects-card {
         height: auto;
-        max-height: auto;
         max-width: 900px;
+        padding: 2% 5%;
+    }
+
+    .projects-iframes iframe {
+        height: 350px !important;
+    }
+
+    .buttons {
+        width: 100%;
     }
 
     .bio {
