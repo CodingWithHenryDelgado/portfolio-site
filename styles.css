@@ -589,7 +589,19 @@ svg {
     }
 
     .menu {
+        padding: 45px;
         left: 45px;
+    }
+
+    .menu::before,
+    .menu::after {
+        top: 42px;
+        left: 22px;
+        width: 45px;
+    }
+
+    .button a {
+        padding: 30px;
     }
 
     .child {
