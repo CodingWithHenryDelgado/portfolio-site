@@ -383,6 +383,12 @@ svg {
     background-image: url('./img/centercentre-wallpaper.png');
 }
 
+#aycl-wallpaper {
+    background-color: #950300;
+    background-image: url('./img/aycl.png');
+    background-size: 90%;
+}
+
 .project-images:hover,
 .social-media i:hover {
     transform: scale(1.2);
