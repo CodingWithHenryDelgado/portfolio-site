@@ -389,6 +389,14 @@ svg {
     background-size: 90%;
 }
 
+#neurogym-wallpaper {
+    background-image: url('./img/neurogym.png');
+}
+
+#mern-wallpaper {
+    background-image: url('./img/proshop.png');
+}
+
 .project-images:hover,
 .social-media i:hover {
     transform: scale(1.2);
