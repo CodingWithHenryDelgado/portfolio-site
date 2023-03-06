@@ -397,6 +397,10 @@ svg {
     background-image: url('./img/proshop.png');
 }
 
+#neurogymfigma {
+    display: none;
+}
+
 .project-images:hover,
 .social-media i:hover {
     transform: scale(1.2);
@@ -662,6 +666,10 @@ svg {
     #skills h3 {
         font-size: 4rem;
         margin-bottom: 0;
+    }
+
+    #neurogymfigma {
+        display: block;
     }
 
     .one-skill h5 {
