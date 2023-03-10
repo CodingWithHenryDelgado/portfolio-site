@@ -1,3 +1,21 @@
+/*------------------------------------*\
+    INDEX
+\*------------------------------------*/
+
+/*
+NAVBAR
+CHILD
+INTRODUCTION CARD
+PROJECTS GALLERY
+PROJECTS CARD
+SKILLS
+
+TABLET SIZES
+
+DESKTOP AND ABOVE SIZES
+
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -46,6 +64,10 @@ h4 {
     color: #24212A;
     font-family: 'Cabin', cursive;
 }
+
+/*------------------------------------*\
+    NAVBAR
+\*------------------------------------*/
 
 .menu {
     position: sticky;
@@ -127,17 +149,9 @@ h4 {
     transition: 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28), 0.2s ease opacity, 0.2s cubic-bezier(0.08, 0.82, 0.17, 1) transform;
 }
 
-.background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100vw;
-    height: auto;
-    overflow-x: hidden;
-    z-index: -10;
-}
+/*------------------------------------*\
+    END OF NAVBAR
+\*------------------------------------*/
 
 .container {
     display: flex;
@@ -157,60 +171,9 @@ h4 {
     /* Safari and Chrome */
 }
 
-#closeButton,
-#siteButton,
-#siteCode {
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 20px;
-    box-sizing: border-box;
-    color: #000;
-    cursor: pointer;
-    display: flex;
-    fill: #000;
-    font-size: 16px;
-    font-weight: 600;
-    height: 48px;
-    justify-content: center;
-    letter-spacing: -.8px;
-    line-height: 24px;
-    outline: 0;
-    margin: 10px 0;
-    padding: 0 17px;
-    text-align: center;
-    text-decoration: none;
-    transition: all .3s;
-    user-select: none;
-    letter-spacing: 0.5px;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: auto;
-}
-
-#closeButton:focus,
-#siteButton:focus,
-#siteCode:focus {
-    color: #171e29;
-}
-
-#closeButton:hover,
-#siteButton:hover,
-#siteCode:hover,
-#ccHeader a:hover {
-    border-color: #06f;
-    color: #06f;
-    fill: #06f;
-}
-
-#closeButton:active,
-#siteButton:active,
-#siteCode:active,
-#ccHeader a:active {
-    border-color: #06f;
-    color: #06f;
-    fill: #06f;
-}
+/*------------------------------------*\
+    CHILD (CARDS CONTAINER)
+\*------------------------------------*/
 
 .child {
     display: flex;
@@ -239,6 +202,10 @@ h4 {
     padding: 10%;
     width: 90%;
 }
+
+/*------------------------------------*\
+    INTRODUCTION CARD
+\*------------------------------------*/
 
 .about {
     background-image: url('./img/selfie-201.png');
@@ -285,6 +252,30 @@ h4 {
     height: 200px;
     width: 200px;
 }
+
+.social-media {
+    font-size: 36px;
+    width: 20%;
+}
+
+.social-media a {
+    color: #24212A;
+    margin: 10% 0;
+    text-decoration: none;
+}
+
+.social-media i {
+    margin: 30% 0;
+    transition: 0.3s;
+}
+
+/*------------------------------------*\
+    END OF INTRODUCTION CARD
+\*------------------------------------*/
+
+/*------------------------------------*\
+    PROJECTS GALLERY
+\*------------------------------------*/
 
 .projects,
 .projects-card {
@@ -362,6 +353,14 @@ h4 {
     display: none;
 }
 
+/*------------------------------------*\
+    END OF PROJECTS CARD
+\*------------------------------------*/
+
+/*------------------------------------*\
+    PROJECTS CARD
+\*------------------------------------*/
+
 .projects-card {
     opacity: 0;
     transition: opacity 1s ease-out;
@@ -383,11 +382,74 @@ h4 {
     font-size: 100px;
 }
 
+#closeButton,
+#siteButton,
+#siteCode {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    fill: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    outline: 0;
+    margin: 10px 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    letter-spacing: 0.5px;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+#closeButton:focus,
+#siteButton:focus,
+#siteCode:focus {
+    color: #171e29;
+}
+
+#closeButton:hover,
+#siteButton:hover,
+#siteCode:hover,
+#ccHeader a:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+#closeButton:active,
+#siteButton:active,
+#siteCode:active,
+#ccHeader a:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
 #skills h3 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10%;
 }
+
+/*------------------------------------*\
+    END OF PROJECTS CARD
+\*------------------------------------*/
+
+/*------------------------------------*\
+    SKILLS
+\*------------------------------------*/
 
 .all-skills {
     display: inline-grid;
@@ -405,30 +467,13 @@ h4 {
     font-size: 64px;
 }
 
-.links {
-    margin: 10% 0;
-}
+/*------------------------------------*\
+    END OF SKILLS
+\*------------------------------------*/
 
-.links a {
-    font-size: 1em;
-    margin: 5% 0;
-}
-
-.social-media {
-    font-size: 36px;
-    width: 20%;
-}
-
-.social-media a {
-    color: #24212A;
-    margin: 10% 0;
-    text-decoration: none;
-}
-
-.social-media i {
-    margin: 30% 0;
-    transition: 0.3s;
-}
+/*------------------------------------*\
+    TABLET
+\*------------------------------------*/
 
 @media (min-width: 768px) {
 
@@ -436,6 +481,10 @@ h4 {
         justify-content: flex-end;
         margin-right: 5%;
     }
+
+    /*------------------------------------*\
+        NAVBAR
+    \*------------------------------------*/
 
     .menu {
         left: 10px;
@@ -456,13 +505,13 @@ h4 {
         right: -300px;
     }
 
-    #siteButton,
-    #siteCode {
-        display: inline-flex;
-        font-size: 1.5rem;
-        margin: 0 5%;
-        min-width: 250px;
-    }
+    /*------------------------------------*\
+        END OF NAVBAR
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        INTRODUCTION CARD
+    \*------------------------------------*/
 
     .about {
         background-size: 75%;
@@ -505,6 +554,26 @@ h4 {
         max-width: 750px;
     }
 
+    #info {
+        width: 100%;
+    }
+
+    .social-media {
+        width: 100%;
+    }
+
+    .social-media i {
+        margin: 0 5%;
+    }
+
+    /*------------------------------------*\
+        END OF INTRODUCTION CARD
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        PROJECT GALLERY
+    \*------------------------------------*/
+
     .project {
         flex-direction: row;
         flex-wrap: wrap;
@@ -514,6 +583,14 @@ h4 {
         height: 200px;
         width: 275px;
     }
+
+    /*------------------------------------*\
+        END OF PROJECT GALLERY
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        END OF PROJECT CARDS
+    \*------------------------------------*/
 
     .projects h3,
     .projects-card h3 {
@@ -539,6 +616,22 @@ h4 {
         padding: 5% 0 2% 0;
     }
 
+    #siteButton,
+    #siteCode {
+        display: inline-flex;
+        font-size: 1.5rem;
+        margin: 0 5%;
+        min-width: 250px;
+    }
+
+    /*------------------------------------*\
+        END OF PROJECT CARDS
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        SKILLS
+    \*------------------------------------*/
+
     .all-skills {
         grid-template-columns: 25% 25% 25% 25%;
     }
@@ -552,22 +645,14 @@ h4 {
         margin-bottom: 10%;
     }
 
-    .links {
-        margin: 5% 0;
-    }
-
-    #info {
-        width: 100%;
-    }
-
-    .social-media {
-        width: 100%;
-    }
-
-    .social-media i {
-        margin: 0 5%;
-    }
+    /*------------------------------------*\
+        END OF SKILLS
+    \*------------------------------------*/
 }
+
+/*------------------------------------*\
+    DESKTOP
+\*------------------------------------*/
 
 @media (min-width: 1024px) {
 
@@ -575,6 +660,10 @@ h4 {
         justify-content: flex-start;
         margin-right: 0;
     }
+
+    /*------------------------------------*\
+        NAVBAR
+    \*------------------------------------*/
 
     .menu {
         padding: 45px;
@@ -592,14 +681,26 @@ h4 {
         padding: 30px;
     }
 
+    /*------------------------------------*\
+        END OF NAVBAR
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        CHILD
+    \*------------------------------------*/
+
     .child {
         margin: 0 auto;
         width: 100%;
     }
 
-    .slides {
-        width: 80%;
-    }
+    /*------------------------------------*\
+        END OF CHILD
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        INTRODUCTION CARD
+    \*------------------------------------*/
 
     .about {
         background-size: 40%;
@@ -608,58 +709,6 @@ h4 {
         max-width: 920px;
         padding: 3%;
         margin-top: 3%;
-    }
-
-    .project {
-        justify-content: space-between;
-    }
-
-    .projects,
-    .projects-card {
-        max-width: 920px;
-        padding: 3%;
-        width: 920px;
-    }
-
-    .all-skills {
-        padding: 0;
-    }
-
-    #skills {
-        height: auto;
-        max-width: 920px;
-        padding: 3%;
-        width: 920px;
-    }
-
-    #skills h3 {
-        font-size: 4rem;
-        margin-bottom: 0;
-    }
-
-    #neurogymfigma {
-        display: block;
-    }
-
-    .one-skill h5 {
-        font-size: 2rem;
-    }
-
-    .one-skill i {
-        font-size: 124px;
-    }
-
-    .projects h3 {
-        font-size: 3rem;
-    }
-
-    .projects-iframes iframe {
-        height: 450px !important;
-    }
-
-    #siteButton,
-    #siteCode {
-        font-size: 2rem;
     }
 
     .buttons {
@@ -677,6 +726,34 @@ h4 {
         width: 300px;
     }
 
+    .social-media {
+        text-align: left;
+    }
+
+    .social-media i {
+        margin: 0 1%;
+    }
+
+    /*------------------------------------*\
+        END OF INTRODUCTION CARD
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        PROJECTS GALLERY
+    \*------------------------------------*/
+
+
+    .project {
+        justify-content: space-between;
+    }
+
+    .projects,
+    .projects-card {
+        max-width: 920px;
+        padding: 3%;
+        width: 920px;
+    }
+
     .project {
         margin: 0;
     }
@@ -689,20 +766,69 @@ h4 {
         font-size: 4rem;
     }
 
+    /*------------------------------------*\
+        END OF PROJECTS GALLERY
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        PROJECTS CARD
+    \*------------------------------------*/
+
+    .projects h3 {
+        font-size: 3rem;
+    }
+
     .projects-card p {
         line-height: 2.5rem;
         margin: 2% 0;
     }
 
-    .social-media {
-        text-align: left;
+    .projects-iframes iframe {
+        height: 450px !important;
     }
 
-    .social-media i {
-        margin: 0 1%;
-    }
-
-    .links {
+    #siteButton,
+    #siteCode {
         font-size: 2rem;
     }
+
+    #neurogymfigma {
+        display: block;
+    }
+
+    /*------------------------------------*\
+        END OF PROJECTS CARD
+    \*------------------------------------*/
+
+    /*------------------------------------*\
+        SKILLS
+    \*------------------------------------*/
+
+    .all-skills {
+        padding: 0;
+    }
+
+    #skills {
+        height: auto;
+        max-width: 920px;
+        padding: 3%;
+        width: 920px;
+    }
+
+    #skills h3 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
+    .one-skill h5 {
+        font-size: 2rem;
+    }
+
+    .one-skill i {
+        font-size: 124px;
+    }
+
+    /*------------------------------------*\
+        END OF SKILLS
+    \*------------------------------------*/
 }
