@@ -189,7 +189,7 @@ h4 {
 }
 
 .about,
-.projects,
+.projects-gallery,
 #skills,
 .projects-card {
     background-color: #FFF;
@@ -277,20 +277,20 @@ h4 {
     PROJECTS GALLERY
 \*------------------------------------*/
 
-.projects,
+.projects-gallery,
 .projects-card {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.projects h3,
+.projects-gallery h3,
 .projects-card h3 {
     font-size: 1.1rem;
     margin-bottom: 5%;
     text-align: left;
 }
 
-.projects p,
+.projects-gallery p,
 .projects-card p {
     font-size: 0.8rem;
     font-weight: 400;
@@ -299,7 +299,7 @@ h4 {
     text-align: left;
 }
 
-.project {
+.gallery-cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,11 +307,11 @@ h4 {
     margin: 5% 0;
 }
 
-.project a {
+.gallery-cards a {
     margin: 5%;
 }
 
-.project-images {
+.gallery-images {
     border: 1px solid #BDBCCB;
     border-radius: 5%;
     cursor: pointer;
@@ -370,13 +370,13 @@ h4 {
     opacity: 1;
 }
 
-.project-images:hover,
+.gallery-images:hover,
 .social-media i:hover {
     transform: scale(1.2);
     transition: 0.5s;
 }
 
-.projects i,
+.projects-gallery i,
 .projects-card i {
     color: var(--react-blue);
     font-size: 100px;
@@ -547,7 +547,7 @@ h4 {
         margin: 20% 0;
     }
 
-    .projects,
+    .projects-gallery,
     #skills,
     .projects-card {
         padding: 5%;
@@ -574,12 +574,12 @@ h4 {
         PROJECT GALLERY
     \*------------------------------------*/
 
-    .project {
+    .gallery-cards {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .project-images {
+    .gallery-images {
         height: 200px;
         width: 275px;
     }
@@ -592,13 +592,13 @@ h4 {
         END OF PROJECT CARDS
     \*------------------------------------*/
 
-    .projects h3,
+    .projects-gallery h3,
     .projects-card h3 {
         font-size: 2rem;
         margin: 2% 0;
     }
 
-    .projects p,
+    .projects-gallery p,
     .projects-card p {
         font-size: 1.5rem;
         line-height: 2rem;
@@ -743,26 +743,26 @@ h4 {
     \*------------------------------------*/
 
 
-    .project {
+    .gallery-cards {
         justify-content: space-between;
     }
 
-    .projects,
+    .projects-gallery,
     .projects-card {
         max-width: 920px;
         padding: 3%;
         width: 920px;
     }
 
-    .project {
+    .gallery-cards {
         margin: 0;
     }
 
-    .projects img {
+    .projects-gallery img {
         margin: 2% 3%;
     }
 
-    .projects h2 {
+    .projects-gallery h2 {
         font-size: 4rem;
     }
 
@@ -774,7 +774,7 @@ h4 {
         PROJECTS CARD
     \*------------------------------------*/
 
-    .projects h3 {
+    .projects-gallery h3 {
         font-size: 3rem;
     }
 
