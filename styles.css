@@ -361,14 +361,14 @@ h4 {
     PROJECTS CARD
 \*------------------------------------*/
 
-.projects-card {
+/* .projects-card {
     opacity: 0;
     transition: opacity 1s ease-out;
-}
-
+} */
+/* 
 .projects-card.fade-in {
     opacity: 1;
-}
+} */
 
 .gallery-images:hover,
 .social-media i:hover {
